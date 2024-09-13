@@ -122,11 +122,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<<< HEAD:Assets/Scenes/Sc_Main.unity
---- !u!1 &901770524
-========
 --- !u!1 &1917893980
->>>>>>>> dev:Assets/Scenes/Sc_PlayerBody.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,15 +130,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<<< HEAD:Assets/Scenes/Sc_Main.unity
-  - component: {fileID: 901770527}
-  - component: {fileID: 901770526}
-  - component: {fileID: 901770525}
-========
   - component: {fileID: 1917893983}
   - component: {fileID: 1917893982}
   - component: {fileID: 1917893981}
->>>>>>>> dev:Assets/Scenes/Sc_PlayerBody.unity
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -150,35 +140,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<<< HEAD:Assets/Scenes/Sc_Main.unity
---- !u!81 &901770525
-========
 --- !u!81 &1917893981
->>>>>>>> dev:Assets/Scenes/Sc_PlayerBody.unity
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:Assets/Scenes/Sc_Main.unity
-  m_GameObject: {fileID: 901770524}
-  m_Enabled: 1
---- !u!20 &901770526
-========
   m_GameObject: {fileID: 1917893980}
   m_Enabled: 1
 --- !u!20 &1917893982
->>>>>>>> dev:Assets/Scenes/Sc_PlayerBody.unity
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:Assets/Scenes/Sc_Main.unity
-  m_GameObject: {fileID: 901770524}
-========
   m_GameObject: {fileID: 1917893980}
->>>>>>>> dev:Assets/Scenes/Sc_PlayerBody.unity
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -223,21 +199,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-<<<<<<<< HEAD:Assets/Scenes/Sc_Main.unity
---- !u!4 &901770527
-========
 --- !u!4 &1917893983
->>>>>>>> dev:Assets/Scenes/Sc_PlayerBody.unity
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:Assets/Scenes/Sc_Main.unity
-  m_GameObject: {fileID: 901770524}
-========
   m_GameObject: {fileID: 1917893980}
->>>>>>>> dev:Assets/Scenes/Sc_PlayerBody.unity
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
@@ -246,8 +214,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<<< HEAD:Assets/Scenes/Sc_Main.unity
-========
 --- !u!1 &1917918691
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,9 +246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d329bcb1c4c881149a409759aec20109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidBody: {fileID: 1917918695}
+  _rigidBody: {fileID: 0}
   _moveSpeed: 5
-  _lifePoint: 100
+  _lifePoint: 0
 --- !u!212 &1917918693
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -389,14 +355,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e591d9862469fa4298d2213360ba595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
->>>>>>>> dev:Assets/Scenes/Sc_PlayerBody.unity
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-<<<<<<<< HEAD:Assets/Scenes/Sc_Main.unity
-  - {fileID: 901770527}
-========
   - {fileID: 1917893983}
   - {fileID: 1917918694}
->>>>>>>> dev:Assets/Scenes/Sc_PlayerBody.unity
