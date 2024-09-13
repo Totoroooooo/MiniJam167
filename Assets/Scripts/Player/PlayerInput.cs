@@ -1,4 +1,4 @@
-using MiniJam67.HitSystem;
+using MiniJam167.HitSystem;
 using System.Collections.Generic;
 using UnityEngine;
 
