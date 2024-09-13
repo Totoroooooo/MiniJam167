@@ -35,11 +35,6 @@ namespace MiniJam167.Player
             _rigidBody.velocity = _playerMovementInput * _moveSpeed;
         }
 
-        public void SetMainBody(PlayerBody mainBody)
-        {
-            _mainBody = mainBody;
-        }
-
         public void OnHit(IHitter hitter)
 		{
             float damage = this.GetHitDamage(hitter);
