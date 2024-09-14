@@ -19,17 +19,10 @@ namespace MiniJam167.Enemy
 		public float DamageMultiplier => _damageMultiplier;
 		
 		private float _currentHealth;
-		private EnemyBody _mainBody;
 		
 		public delegate void TimedEvent(float duration);
 		public event TimedEvent Disabled;
-
 		public event Action Enabled;
-
-		public void SetMainBody(EnemyBody mainBody)
-		{
-			_mainBody = mainBody;
-		}
 
 		public void OnHit(IHitter hitter)
 		{
