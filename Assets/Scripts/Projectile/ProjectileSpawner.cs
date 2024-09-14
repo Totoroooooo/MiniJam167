@@ -9,7 +9,8 @@ namespace MiniJam167.Projectile
 
         public void SpawnProjectile(Vector2 position, Quaternion rotation)
         {
-            
+            var projectil = _projectilePool.Pool.Get(transform, position, rotation);
+            projectil.Spawn(position, rotation, _projectilePool.Pool);
         }
     }
 }
