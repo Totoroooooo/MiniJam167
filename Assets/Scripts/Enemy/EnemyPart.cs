@@ -18,23 +18,37 @@ namespace MiniJam167.Enemy
 		public float Shield => _shield;
 		public float DamageMultiplier => _damageMultiplier;
 		
-		private float _currentHealth;
+		private float _health;
 		
 		public delegate void TimedEvent(float duration);
-		public event TimedEvent Disabled;
+		public delegate void HitEvent(float health, float maxHealth, float damage);
+		
+		public event Action Initialized;
 		public event Action Enabled;
+		public event TimedEvent Disabled;
+		public event HitEvent Hit;
+		public event Action Corrupted;
+		public event Action Died;
 
 		public void OnHit(IHitter hitter)
 		{
-			float damage = this.GetHitDamage(hitter);
-			_currentHealth -= damage;
-			if (_currentHealth <= 0)
+			float damage = Mathf.Min(_health, this.GetHitDamage(hitter));
+			_health -= damage;
+			Hit?.Invoke(_health, _maxHealth, damage);
+			if (_health <= 0)
 				Disable();
 		}
 
-		private void Enable()
+		public void Init()
 		{
-			_currentHealth = _maxHealth;
+			_health = _maxHealth;
+			_collider.enabled = true;
+			Initialized?.Invoke();
+		}
+
+		public void Enable()
+		{
+			_health = _maxHealth;
 			_collider.enabled = true;
 			Enabled?.Invoke();
 		}
@@ -51,6 +65,18 @@ namespace MiniJam167.Enemy
 				await UniTask.WaitForSeconds(_disableDuration);
 				Enable();
 			}
+		}
+
+		public void Corrupt()
+		{
+			_collider.enabled = false;
+			Corrupted?.Invoke();
+		}
+
+		public void Die()
+		{
+			_collider.enabled = false;
+			Died?.Invoke();
 		}
 	}
 }
