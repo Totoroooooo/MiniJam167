@@ -14,7 +14,7 @@ namespace MiniJam167.Enemy
 		}
 
 		[Header("References")]
-		[SerializeField] private Collider _collider;
+		[SerializeField] private Collider2D _collider;
 
 		[Header("Phases")]
 		[SerializeField] private Phase[] _phases;

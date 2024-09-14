@@ -7,7 +7,7 @@ namespace MiniJam167.Enemy
 {
 	public class EnemyPart : MonoBehaviour, IHittable
 	{
-		[SerializeField] private Collider _collider;
+		[SerializeField] private Collider2D _collider;
 		[Space]
 		[SerializeField] private float _maxHealth = 100f;
 		[SerializeField] private float _shield;
