@@ -7,7 +7,7 @@ namespace MiniJam167.Enemy
 {
 	public class EnemyBody : MonoBehaviour, IHittable
 	{
-		public struct Phase
+		[Serializable] public struct Phase
 		{
 			public float MaxHealth;
 			public EnemyPart[] Parts;
@@ -50,8 +50,13 @@ namespace MiniJam167.Enemy
         {
 	        _enabledParts.Clear();
             _maxHealth = 0;
-            for (int phase = 0; phase < _phases.Length - 1; phase++)
-                _maxHealth += _phases[phase].MaxHealth;
+            for (int phaseId = 0; phaseId < _phases.Length - 1; phaseId++)
+            {
+	            Phase phase = _phases[phaseId];
+                _maxHealth += phase.MaxHealth;
+                foreach (EnemyPart part in phase.Parts)
+	                part.Hide();
+            }
             _health = _maxHealth;
             _currentPhase = -1;
             NextPhase();
@@ -60,13 +65,17 @@ namespace MiniJam167.Enemy
         private void NextPhase()
         {
             _currentPhase++;
-            Action action = _currentPhase switch
+            switch (_currentPhase)
             {
-	            int i when i < _phases.Length - 1 && i >= 0 => NormalPhase,
-	            int i when i == _phases.Length - 1 => LastPhase,
-	            _ => Die
-            };
-            action.Invoke();
+	            case int i when i < _phases.Length - 1 && i >= 0 :
+		            NormalPhase(); break;
+	            
+	            case int i when i == _phases.Length - 1 :
+		            LastPhase(); break;
+	            
+	            default:
+		            Die(); break;
+            }
         }
 
         private void NormalPhase()
@@ -77,6 +86,7 @@ namespace MiniJam167.Enemy
 
         private void LastPhase()
         {
+	        CorruptParts();
 	        SetPhaseHealth();
         }
 
@@ -105,6 +115,12 @@ namespace MiniJam167.Enemy
 				_enabledParts.Add(part);
 			}
 		}
+
+		private void CorruptParts()
+		{
+			foreach (EnemyPart part in _enabledParts)
+				part.Corrupt();
+		}
 		
 		public void OnHit(IHitter hitter)
 		{
@@ -113,7 +129,7 @@ namespace MiniJam167.Enemy
 			_health -= damage;
 			HealthChanged?.Invoke(_health, _maxHealth, _phaseHealth, _phases[_currentPhase].MaxHealth, damage);
 			
-			if (_health <= 0)
+			if (_phaseHealth <= 0)
 				NextPhase();
 		}
 	}

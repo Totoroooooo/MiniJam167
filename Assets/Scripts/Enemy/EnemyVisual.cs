@@ -46,6 +46,8 @@ namespace MiniJam167.Enemy
 
         private void OnHealthChanged(float health, float maxHealth, float phaseHealth, float phaseMaxHealth, float damage)
         {
+            if (health == 0)
+                return;
             Color color = _corrupted
                 ? _corruptedGradient.Evaluate(phaseHealth / phaseMaxHealth)
                 : _normalGradient.Evaluate(health / maxHealth);
@@ -56,9 +58,9 @@ namespace MiniJam167.Enemy
         private void OnPhaseChanged(int phase, int maxPhase)
         {
             bool wasCorrupted = _corrupted;
-            _corrupted = phase == maxPhase;
+            _corrupted = phase == maxPhase - 1;
 
-            if (wasCorrupted == _corrupted)
+            if (wasCorrupted == _corrupted && phase > 0)
                 return;
             
             if (_corrupted)

@@ -30,6 +30,7 @@ namespace MiniJam167.Enemy
         private void Awake()
         {
             _part.Initialized += OnInitialized;
+            _part.Hidden += OnHidden;
             _part.Enabled += OnEnabled;
             _part.Disabled += OnDisabled;
             _part.Hit += OnHit;
@@ -39,6 +40,7 @@ namespace MiniJam167.Enemy
         private void OnDestroy()
         {
             _part.Initialized -= OnInitialized;
+            _part.Hidden -= OnHidden;
             _part.Enabled -= OnEnabled;
             _part.Disabled -= OnDisabled;
             _part.Hit -= OnHit;
@@ -47,8 +49,16 @@ namespace MiniJam167.Enemy
 
         private void OnInitialized()
         {
+            Color color = _normalGradient.Evaluate(0f);
             foreach (VisualPart bone in _featherVisuals)
                 bone.Renderer.sprite = bone.NormalSprite;
+
+            OnEnabled();
+        }
+
+        private void OnHidden()
+        {
+            SetColor(Color.clear);
         }
 
         private void OnEnabled()
@@ -81,8 +91,8 @@ namespace MiniJam167.Enemy
         
         private void SetColor(Color color)
         {
-            foreach (VisualPart bone in _featherVisuals)
-                bone.Renderer.color = color;
+            foreach (VisualPart feather in _featherVisuals)
+                feather.Renderer.color = color;
         }
     }
 }

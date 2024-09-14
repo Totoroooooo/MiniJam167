@@ -1,5 +1,5 @@
 ﻿using System;
-using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using MiniJam167.HitSystem;
 using UnityEngine;
 
@@ -8,6 +8,7 @@ namespace MiniJam167.Enemy
 	public class EnemyPart : MonoBehaviour, IHittable
 	{
 		[SerializeField] private Collider2D _collider;
+		[SerializeField] private GameObject _container;
 		[Space]
 		[SerializeField] private float _maxHealth = 100f;
 		[SerializeField] private float _shield;
@@ -19,11 +20,13 @@ namespace MiniJam167.Enemy
 		public float DamageMultiplier => _damageMultiplier;
 		
 		private float _health;
+		private Tween _tween;
 		
 		public delegate void TimedEvent(float duration);
 		public delegate void HitEvent(float health, float maxHealth, float damage);
 		
 		public event Action Initialized;
+		public event Action Hidden;
 		public event Action Enabled;
 		public event TimedEvent Disabled;
 		public event HitEvent Hit;
@@ -41,9 +44,17 @@ namespace MiniJam167.Enemy
 
 		public void Init()
 		{
+			_container.SetActive(true);
 			_health = _maxHealth;
 			_collider.enabled = true;
 			Initialized?.Invoke();
+		}
+
+		public void Hide()
+		{
+			_container.SetActive(false);
+			_collider.enabled = false;
+			Hidden?.Invoke();
 		}
 
 		public void Enable()
@@ -57,19 +68,13 @@ namespace MiniJam167.Enemy
 		{
 			_collider.enabled = false;
 			Disabled?.Invoke(_disableDuration);
-			Async().Forget();
-			return;
-
-			async UniTaskVoid Async()
-			{
-				await UniTask.WaitForSeconds(_disableDuration);
-				Enable();
-			}
+			_tween = DOVirtual.DelayedCall(_disableDuration, Enable).Play();
 		}
 
 		public void Corrupt()
 		{
 			_collider.enabled = false;
+			_tween?.Kill();
 			Corrupted?.Invoke();
 		}
 
