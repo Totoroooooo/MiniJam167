@@ -4,5 +4,6 @@ namespace MiniJam167.HitSystem
 	{
 		public float Damage { get; }
 		public float Lethality { get; }
-	}
+
+    }
 }
