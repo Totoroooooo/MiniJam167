@@ -1,5 +1,8 @@
 using DG.Tweening;
 using MiniJam167.HitSystem;
+using System;
+using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 namespace MiniJam167.Player
@@ -7,7 +10,8 @@ namespace MiniJam167.Player
     public class PlayerBody : MonoBehaviour, IHittable
 	{
         [SerializeField] private Rigidbody2D _rigidBody;
-		[Space]
+        [Space]
+        [SerializeField] private List<PlayerSkillMemo> _playerSkill;
 		[SerializeField] private float _moveSpeed = 5;
 		[SerializeField] private int _maxHealth = 100;
         [SerializeField] private Gradient _playerColor;
@@ -26,7 +30,10 @@ namespace MiniJam167.Player
         private void Start()
         {
             PlayerInput.PlayerMoved += OnPlayerMoved;
+            foreach (var skill in _playerSkill)
+                skill.Subscribe(transform.position, transform.rotation);
         }
+
         private void Update()
         {
             var xValidPosition = Mathf.Clamp(transform.position.x, _bottomLeftCorner.position.x, _topRightCorner.position.x);
@@ -38,6 +45,8 @@ namespace MiniJam167.Player
         private void OnDestroy()
         {
             PlayerInput.PlayerMoved -= OnPlayerMoved;
+            foreach (var skill in _playerSkill)
+                skill.Unsubscribe(transform.position, transform.rotation);
         }
 
         private void Awake()
