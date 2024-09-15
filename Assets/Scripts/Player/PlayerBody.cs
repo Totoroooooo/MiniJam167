@@ -1,16 +1,16 @@
-using DG.Tweening;
-using MiniJam167.HitSystem;
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
+using MiniJam167.HitSystem;
 using MiniJam167.Utility;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace MiniJam167.Player
 {
     public class PlayerBody : MonoBehaviour, IHittable
-	{
+    {
+        [SerializeField] private TransformRadio _transformRadio;
+        
         [Header("Components")]
         [SerializeField] private Rigidbody2D _rigidBody;
         [SerializeField] private SpriteRenderer _spriteRenderer;
@@ -42,12 +42,14 @@ namespace MiniJam167.Player
 
         public event Action Died;
 
-        public void Init()
+        private void Awake()
         {
-            _init = true;
-            PlayerInput.PlayerMoved += OnPlayerMoved;
-            foreach (PlayerSkillMemo skill in _playerSkill)
-                skill?.Subscribe(transform.position, transform.rotation);
+            _currentHealth = _maxHealth;
+        }
+
+        private void Start()
+        {
+            _transformRadio.Value = transform;
         }
 
         private void OnDestroy()
@@ -57,17 +59,20 @@ namespace MiniJam167.Player
                 skill?.Unsubscribe(transform.position, transform.rotation);
         }
 
-        private void Awake()
-        {
-            _currentHealth = _maxHealth;
-        }
-
         private void FixedUpdate()
         {
             var xValidPosition = Mathf.Clamp(transform.position.x, _bottomLeftCorner.position.x, _topRightCorner.position.x);
             var yValidPosition = Mathf.Clamp(transform.position.y, _bottomLeftCorner.position.y, _topRightCorner.position.y);
 
             transform.position = new Vector3(xValidPosition, yValidPosition, 0f);
+        }
+
+        public void Init()
+        {
+            _init = true;
+            PlayerInput.PlayerMoved += OnPlayerMoved;
+            foreach (PlayerSkillMemo skill in _playerSkill)
+                skill?.Subscribe(transform.position, transform.rotation);
         }
 
         private void OnPlayerMoved(Vector2 directionRaw)

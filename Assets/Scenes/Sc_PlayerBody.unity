@@ -729,10 +729,6 @@ PrefabInstance:
       value: Pf_PlayerBody
       objectReference: {fileID: 0}
     - target: {fileID: 6034496265475030772, guid: c58a242c653ee7d458b7db550cb38949, type: 3}
-      propertyPath: GameManager
-      value: 
-      objectReference: {fileID: 981881202}
-    - target: {fileID: 6034496265475030772, guid: c58a242c653ee7d458b7db550cb38949, type: 3}
       propertyPath: _topRightCorner
       value: 
       objectReference: {fileID: 1782278586}

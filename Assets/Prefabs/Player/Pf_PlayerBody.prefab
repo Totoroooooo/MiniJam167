@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d329bcb1c4c881149a409759aec20109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _transformRadio: {fileID: 11400000, guid: 1ad4381f928a69843a97a2428d2104f1, type: 2}
   _rigidBody: {fileID: 6914657024348885958}
   _spriteRenderer: {fileID: 7041186781671640906}
   _playerSkill:

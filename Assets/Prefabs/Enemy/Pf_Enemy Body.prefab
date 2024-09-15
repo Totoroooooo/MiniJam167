@@ -213,6 +213,7 @@ Transform:
   - {fileID: 4162865333092623754}
   - {fileID: 289864480943343279}
   - {fileID: 6215300979084391891}
+  - {fileID: 250276248789448728}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1659824954508772483
@@ -548,7 +549,7 @@ GameObject:
   - component: {fileID: 6215300979084391891}
   - component: {fileID: 5070447635391167762}
   m_Layer: 8
-  m_Name: Projectile Spawner
+  m_Name: Default Projectile Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -754,6 +755,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &7431281589503594183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 250276248789448728}
+  - component: {fileID: 8518995019938169315}
+  m_Layer: 8
+  m_Name: Homing Projectile Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &250276248789448728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7431281589503594183}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6406575235320401087}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8518995019938169315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7431281589503594183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233c5261e42590c47a3ac829c96e0585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pool:
+    _original: {fileID: 6368290622121501231, guid: 02e8456ea410a8a4da59f24591f37548, type: 3}
 --- !u!1 &8736204194607320592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,14 +1891,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917a7e766e254813beaf771065e85128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectilePool: {fileID: 5070447635391167762}
+  _projectilePool: {fileID: 8518995019938169315}
   _spawns:
   - Points:
     - {fileID: 6406575235320401087}
     RotationRange:
     - {x: 135, y: 225}
-  _fireRate: 3
-  _corruptFireRate: 5
+  _fireRate: 0.5
+  _corruptFireRate: 1
   _part: {fileID: 1236141692384532158}
 --- !u!114 &8540427182475220267 stripped
 MonoBehaviour:

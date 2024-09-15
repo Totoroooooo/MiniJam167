@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6059494096307170009}
   - component: {fileID: 8717099493673543264}
-  - component: {fileID: 141466701060822066}
   - component: {fileID: 2509563566510564824}
-  - component: {fileID: 5925939887483695778}
+  - component: {fileID: 5685102541204107273}
+  - component: {fileID: 6368290622121501231}
   m_Layer: 9
-  m_Name: Pf_DefaultProjectile_Enemy
+  m_Name: Pf_HomingProjectile_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.21, y: -0.19, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cf7bf891c23979b4eb1da75862813f4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8a5cdf1fb03e664d9b0be09b9624c03, type: 3}
   m_Color: {r: 0.6603774, g: 0.17132434, b: 0.17132434, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,23 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &141466701060822066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651679100995585423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e67b5f58407b1442b0a7a6495cf21af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 10
-  _lethality: 0
-  _rb: {fileID: 2509563566510564824}
-  _speed: 5
-  _life: 10
 --- !u!50 &2509563566510564824
 Rigidbody2D:
   serializedVersion: 4
@@ -131,8 +114,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!68 &5925939887483695778
-EdgeCollider2D:
+--- !u!70 &5685102541204107273
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -163,16 +146,27 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.36642802, y: 0.5616177}
-  - {x: 0.3235259, y: 0.66849476}
-  - {x: 0.7177501, y: 0.12815079}
-  - {x: 0.38817072, y: -0.5710052}
-  - {x: -0.21306372, y: -0.675874}
-  - {x: -0.6569637, y: -0.19968617}
-  m_AdjacentStartPoint: {x: -0.6569637, y: -0.1996862}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 1
-  m_UseAdjacentEndPoint: 0
+  m_Offset: {x: 0, y: 1.4}
+  m_Size: {x: 1, y: 2.8}
+  m_Direction: 0
+--- !u!114 &6368290622121501231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651679100995585423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5540cddfc7bb4f198e145a4e0116192c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 20
+  _lethality: 0
+  _rb: {fileID: 2509563566510564824}
+  _speed: 3
+  _life: 18
+  _rotationSpeed: 0.1
+  _precisionDuration: 5
+  _imprecisionDuration: 3
+  _target: {fileID: 11400000, guid: 1ad4381f928a69843a97a2428d2104f1, type: 2}
