@@ -22,6 +22,8 @@ namespace MiniJam167.Enemy
         [Space]
         [SerializeField] private ColorMemo _corruptedColor;
 
+        private Tween _flashTween;
+        private bool _isCorrupted;
         private void Reset()
         {
             _part = GetComponent<EnemyPart>();
@@ -63,7 +65,9 @@ namespace MiniJam167.Enemy
 
         private void OnEnabled()
         {
-            DOVirtual.Color(_disabledColor.Value, _normalGradient.Evaluate(1), _enabledDuration.Value, SetColor).Play();
+            if (_isCorrupted) return;
+            _flashTween?.Kill();
+            _flashTween = DOVirtual.Color(_disabledColor.Value, _normalGradient.Evaluate(1), _enabledDuration.Value, SetColor).Play();
         }
 
         private void OnDisabled(float duration)
@@ -73,20 +77,24 @@ namespace MiniJam167.Enemy
 
         private void OnHit(float health, float maxHealth, float damage)
         {
+            if (_isCorrupted) return;
             Color color = health == 0
                 ? _disabledColor.Value
                 : _normalGradient.Evaluate(health / maxHealth);
             SetColor(_flashColor.Value);
-            DOVirtual.Color(_flashColor.Value, color, _flashDuration.Value, SetColor).Play();
+            _flashTween?.Kill();
+            _flashTween = DOVirtual.Color(_flashColor.Value, color, _flashDuration.Value, SetColor).Play();
         }
 
         private void OnCorrupted()
         {
+            _isCorrupted = true;
             Color color = _corruptedColor.Value;
             foreach (VisualPart bone in _featherVisuals)
                 bone.Renderer.sprite = bone.CorruptedSprite;
             SetColor(_flashColor.Value);
-            DOVirtual.Color(_flashColor.Value, color, _flashDuration.Value, SetColor).Play();
+            _flashTween?.Kill();
+            _flashTween = DOVirtual.Color(_flashColor.Value, color, _flashDuration.Value, SetColor).Play();
         }
         
         private void SetColor(Color color)

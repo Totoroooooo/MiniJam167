@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using FMODUnity;
 using MiniJam167.HitSystem;
 using UnityEngine;
 
@@ -42,11 +43,11 @@ namespace MiniJam167.Enemy
 		public event PhaseEvent PhaseChanged;
 		public event Action Died;
 
-		private void Start()
+        private void Start()
 		{
-			Init();
+			
 		}
-        
+
         public void Init()
         {
 	        _normalCollider.enabled = true;
@@ -101,7 +102,7 @@ namespace MiniJam167.Enemy
 			foreach (EnemyPart part in _enabledParts)
 				part.Die();
 			Died?.Invoke();
-		}
+        }
 
 		private void SetPhaseHealth()
 		{

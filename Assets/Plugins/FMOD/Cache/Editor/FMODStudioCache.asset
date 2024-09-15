@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMod Assets/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638619741945538900
+  lastModified: 638620001376616097
   FileSizes:
   - Name: Desktop
     Value: 1280832
@@ -35,7 +35,7 @@ MonoBehaviour:
   Path: FMod Assets/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638619741945435605
+  lastModified: 638620001376505831
   FileSizes:
   - Name: Desktop
     Value: 1000
@@ -55,7 +55,7 @@ MonoBehaviour:
   Path: FMod Assets/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 638619741945549105
+  lastModified: 638620001376646102
   FileSizes:
   - Name: Desktop
     Value: 470
@@ -85,7 +85,7 @@ MonoBehaviour:
   - {fileID: -4138896822312740413}
   StringsBanks:
   - {fileID: 6654161545235527382}
-  cacheTime: 638619741945549105
+  cacheTime: 638620001376646102
   cacheVersion: 131619
 --- !u!114 &1913217198197316809
 MonoBehaviour:
@@ -102,7 +102,7 @@ MonoBehaviour:
   Path: FMod Assets/Desktop/Attacks.bank
   Name: Attacks
   StudioPath: bank:/Attacks
-  lastModified: 638619741945425639
+  lastModified: 638620001376470806
   FileSizes:
   - Name: Desktop
     Value: 470
@@ -149,7 +149,7 @@ MonoBehaviour:
   Path: FMod Assets/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638619741945435605
+  lastModified: 638620001376535963
   FileSizes:
   - Name: Desktop
     Value: 870
