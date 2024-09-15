@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using MiniJam167.Utility;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace MiniJam167.Player
 {
@@ -19,6 +20,8 @@ namespace MiniJam167.Player
         
         [Header("Movement")]
 		[SerializeField] private float _moveSpeed = 5;
+		[SerializeField][Range(0,1)] private float _rotationSpeed = 0.02f;
+		[SerializeField][Range(0,1)] private float _magnitudeThreshold = 0.2f;
         
         [Header("Health")]
 		[SerializeField] private int _maxHealth = 100;
@@ -33,8 +36,9 @@ namespace MiniJam167.Player
 		public float Shield => 0;
 		public float DamageMultiplier => 1;
 
-        private Vector2 _playerMovementInput;
         private float _currentHealth;
+        private Vector2 directionRaw;
+        private bool init;
 
         public event Action Died;
 
@@ -44,17 +48,10 @@ namespace MiniJam167.Player
 
         public void Init()
         {
+            init = true;
             PlayerInput.PlayerMoved += OnPlayerMoved;
             foreach (var skill in _playerSkill)
                 skill?.Subscribe(transform.position, transform.rotation);
-        }
-
-        private void Update()
-        {
-            var xValidPosition = Mathf.Clamp(transform.position.x, _bottomLeftCorner.position.x, _topRightCorner.position.x);
-            var yValidPosition = Mathf.Clamp(transform.position.y, _bottomLeftCorner.position.y, _topRightCorner.position.y);
-
-            transform.position = new Vector3(xValidPosition, yValidPosition, 0f);
         }
 
         private void OnDestroy()
@@ -69,14 +66,27 @@ namespace MiniJam167.Player
             _currentHealth = _maxHealth;
         }
 
-        private void OnPlayerMoved(Vector2 position)
+        private void FixedUpdate()
         {
-            _playerMovementInput = position;
+            if (!init) return;
+            var direction = directionRaw.normalized;
+            if (directionRaw.magnitude < _magnitudeThreshold)
+            {
+                _rigidBody.velocity = Vector3.zero;
+                return;
+            }
+            transform.up = Vector3.Lerp(transform.up, direction, _rotationSpeed);
+            _rigidBody.velocity = transform.up * _moveSpeed;
+
+            var xValidPosition = Mathf.Clamp(transform.position.x, _bottomLeftCorner.position.x, _topRightCorner.position.x);
+            var yValidPosition = Mathf.Clamp(transform.position.y, _bottomLeftCorner.position.y, _topRightCorner.position.y);
+
+            transform.position = new Vector3(xValidPosition, yValidPosition, 0f);
         }
 
-        private void FixedUpdate()
-		{
-            _rigidBody.velocity = _playerMovementInput * _moveSpeed;
+        private void OnPlayerMoved(Vector2 position)
+        {
+            directionRaw = position;
         }
 
         private void Die()
