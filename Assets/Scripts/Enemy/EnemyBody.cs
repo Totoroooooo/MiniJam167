@@ -14,7 +14,8 @@ namespace MiniJam167.Enemy
 		}
 
 		[Header("References")]
-		[SerializeField] private Collider2D _collider;
+		[SerializeField] private Collider2D _normalCollider;
+		[SerializeField] private Collider2D _corruptedCollider;
 
 		[Header("Phases")]
 		[SerializeField] private Phase[] _phases;
@@ -48,6 +49,8 @@ namespace MiniJam167.Enemy
         
         public void Init()
         {
+	        _normalCollider.enabled = true;
+	        _corruptedCollider.enabled = false;
 	        _enabledParts.Clear();
             _maxHealth = 0;
             for (int phaseId = 0; phaseId < _phases.Length - 1; phaseId++)
@@ -86,13 +89,15 @@ namespace MiniJam167.Enemy
 
         private void LastPhase()
         {
+	        _normalCollider.enabled = false;
+	        _corruptedCollider.enabled = true;
 	        CorruptParts();
 	        SetPhaseHealth();
         }
 
 		private void Die()
 		{
-			_collider.enabled = false;
+			_corruptedCollider.enabled = false;
 			foreach (EnemyPart part in _enabledParts)
 				part.Die();
 			Died?.Invoke();
