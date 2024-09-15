@@ -23,5 +23,9 @@
 		<relationship name="mixer">
 			<destination>{ea1249e3-c70b-4038-b1e2-b9eae476857e}</destination>
 		</relationship>
+		<relationship name="platforms">
+			<destination>{55842044-8c91-4130-b510-dfa2e4979ce0}</destination>
+			<destination>{8b2364b4-ad98-4ff0-b860-74479cfa5f54}</destination>
+		</relationship>
 	</object>
 </objects>
