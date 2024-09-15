@@ -36,6 +36,7 @@ namespace MiniJam167.Enemy
             _part.Enabled += OnEnabled;
             _part.Disabled += OnDisabled;
             _part.Corrupted += OnCorrupted;
+            _part.Hidden += OnHidden;
         }
 
         private void OnDestroy()
@@ -44,6 +45,7 @@ namespace MiniJam167.Enemy
             _part.Enabled -= OnEnabled;
             _part.Disabled -= OnDisabled;
             _part.Corrupted -= OnCorrupted;
+            _part.Hidden -= OnHidden;
         }
 
         private void Update()
@@ -78,6 +80,11 @@ namespace MiniJam167.Enemy
         private void OnCorrupted()
         {
             _delay = _corruptFireRate == 0 ? 0 : 1f / _corruptFireRate;
+        }
+
+        private void OnHidden()
+        {
+            _delay = 0;
         }
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8717099493673543264}
   - component: {fileID: 141466701060822066}
   - component: {fileID: 2509563566510564824}
-  - component: {fileID: 3670596663630447730}
+  - component: {fileID: 8762351735293533488}
   m_Layer: 7
   m_Name: Pf_DefaultProjectile
   m_TagString: Untagged
@@ -102,7 +102,7 @@ MonoBehaviour:
   _damage: 10
   _lethality: 0
   _rb: {fileID: 2509563566510564824}
-  _speed: 10
+  _speed: 5
   _life: 3
 --- !u!50 &2509563566510564824
 Rigidbody2D:
@@ -131,8 +131,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!68 &3670596663630447730
-EdgeCollider2D:
+--- !u!58 &8762351735293533488
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -164,15 +164,5 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.36642802, y: 0.5616177}
-  - {x: 0.3235259, y: 0.66849476}
-  - {x: 0.7177501, y: 0.12815079}
-  - {x: 0.38817072, y: -0.5710052}
-  - {x: -0.21306372, y: -0.675874}
-  - {x: -0.6569637, y: -0.19968617}
-  m_AdjacentStartPoint: {x: -0.6569637, y: -0.1996862}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 1
-  m_UseAdjacentEndPoint: 0
+  serializedVersion: 2
+  m_Radius: 0.7

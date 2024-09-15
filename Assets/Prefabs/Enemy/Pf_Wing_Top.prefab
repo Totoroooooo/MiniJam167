@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7552205206253425917}
   - component: {fileID: 8975171170264810424}
   - component: {fileID: 6641296054242350710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Tip_Feather_Down3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 6641296054242350710}
 --- !u!68 &6641296054242350710
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -105,7 +106,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576663818267518844}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -156,7 +157,7 @@ GameObject:
   - component: {fileID: 7036563581535178097}
   - component: {fileID: 8178088332664664310}
   - component: {fileID: 2318438394254462661}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Tip_Feather_up1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 2318438394254462661}
 --- !u!68 &2318438394254462661
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -250,7 +252,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055404969491836411}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -300,7 +302,7 @@ GameObject:
   - component: {fileID: 8443957558183050035}
   - component: {fileID: 5751916663109571689}
   - component: {fileID: 3630741257834939932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Mid_Feather_Down1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,6 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 3630741257834939932}
 --- !u!68 &3630741257834939932
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -393,7 +396,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399440223769155743}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -445,7 +448,7 @@ GameObject:
   - component: {fileID: 2130099622014328234}
   - component: {fileID: 6280824498495073791}
   - component: {fileID: 7269684491633576363}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pf_Wing_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +502,6 @@ MonoBehaviour:
   - {fileID: 2601739497946812593}
   - {fileID: 8258618822774645469}
   - {fileID: 5751916663109571689}
-  - {fileID: 8994048213016122111}
   _maxHealth: 100
   _shield: 0
   _damageMultiplier: 1
@@ -648,7 +650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3341535602325193279}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Container - Corrupted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +684,7 @@ GameObject:
   - component: {fileID: 960735726706231591}
   - component: {fileID: 8532515483236940281}
   - component: {fileID: 8191252228794223142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Base_Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,6 +772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 8191252228794223142}
 --- !u!68 &8191252228794223142
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -777,7 +780,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2935975042221022083}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -799,7 +802,7 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -829,7 +832,7 @@ GameObject:
   - component: {fileID: 8220034361731397251}
   - component: {fileID: 203696845563438314}
   - component: {fileID: 6123835197187460555}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Mid_Feather_Up2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -916,6 +919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 6123835197187460555}
 --- !u!68 &6123835197187460555
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -923,7 +927,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2936217191514943771}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -972,7 +976,7 @@ GameObject:
   - component: {fileID: 5168448978701672212}
   - component: {fileID: 4850568330232254318}
   - component: {fileID: 6612795913562395909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Tip_Feather_up2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,6 +1063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 6612795913562395909}
 --- !u!68 &6612795913562395909
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1066,7 +1071,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3308396000994916210}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1116,7 +1121,7 @@ GameObject:
   - component: {fileID: 4476081334168188850}
   - component: {fileID: 2601739497946812593}
   - component: {fileID: 3135486188445010655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Mid_Feather_Down2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1202,6 +1207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 3135486188445010655}
 --- !u!68 &3135486188445010655
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1209,7 +1215,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3345839922222309762}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1260,7 +1266,7 @@ GameObject:
   - component: {fileID: 1813161397781248947}
   - component: {fileID: 7766589871266880822}
   - component: {fileID: 2043561454037947212}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Base_Feather_Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1346,6 +1352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 2043561454037947212}
 --- !u!68 &2043561454037947212
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1353,7 +1360,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3612272695173917949}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1403,7 +1410,7 @@ GameObject:
   - component: {fileID: 6780011790366992575}
   - component: {fileID: 8836115016063628367}
   - component: {fileID: 9119099167610092241}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Tip_Feather_up3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1490,6 +1497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 9119099167610092241}
 --- !u!68 &9119099167610092241
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1497,7 +1505,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3650477906527529859}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1548,7 +1556,7 @@ GameObject:
   - component: {fileID: 4776566194154200529}
   - component: {fileID: 594648232523294905}
   - component: {fileID: 2304743119216640540}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Base_Feather_Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1635,6 +1643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 2304743119216640540}
 --- !u!68 &2304743119216640540
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1642,7 +1651,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4877050643296776293}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1695,7 +1704,7 @@ GameObject:
   - component: {fileID: 5157801556515313235}
   - component: {fileID: 1913488550071314270}
   - component: {fileID: 4288031913983580807}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Tip_Feather_Down2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1781,6 +1790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 4288031913983580807}
 --- !u!68 &4288031913983580807
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1788,7 +1798,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5243114667250319134}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1835,7 +1845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5507143676127024072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1870,7 +1880,7 @@ GameObject:
   - component: {fileID: 3701540429484824904}
   - component: {fileID: 8653590310199017475}
   - component: {fileID: 5763832686469096873}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Base_Feather
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1957,6 +1967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 5763832686469096873}
 --- !u!68 &5763832686469096873
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1964,7 +1975,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5869320648094456879}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2016,7 +2027,7 @@ GameObject:
   - component: {fileID: 1007691958783396260}
   - component: {fileID: 9007683021627519077}
   - component: {fileID: 5558836531789068261}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Tip_Feather_Down1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2102,6 +2113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 5558836531789068261}
 --- !u!68 &5558836531789068261
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2109,7 +2121,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6347290898982011076}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2159,7 +2171,7 @@ GameObject:
   - component: {fileID: 8337543079622265421}
   - component: {fileID: 5060960343788659111}
   - component: {fileID: 1835503826044468313}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Mid_Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2251,6 +2263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 1835503826044468313}
 --- !u!68 &1835503826044468313
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2258,7 +2271,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6398792039647881936}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2307,8 +2320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 528802104986390419}
   - component: {fileID: 7795215764919595313}
-  - component: {fileID: 8994048213016122111}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Protect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2382,18 +2394,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8994048213016122111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7606492472660202615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7855569399073750715
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,7 +2406,7 @@ GameObject:
   - component: {fileID: 1893119993860431503}
   - component: {fileID: 8258618822774645469}
   - component: {fileID: 3965634427861049176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T_Enemy_Phase1_Wing_Mid_Feather_Up1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2493,6 +2493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider2D: {fileID: 3965634427861049176}
 --- !u!68 &3965634427861049176
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2500,7 +2501,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7855569399073750715}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

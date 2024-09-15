@@ -65,7 +65,7 @@ namespace MiniJam167.Enemy
 		private void EnableCollision(bool enable)
 		{
 			foreach (HitCollision collision in _hitCollisions)
-				collision.enabled = enable;
+				collision.Enable(enable);
 		}
 
 		public void Hide()
