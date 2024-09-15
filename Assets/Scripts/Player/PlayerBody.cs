@@ -40,7 +40,7 @@ namespace MiniJam167.Player
         {
             PlayerInput.PlayerMoved += OnPlayerMoved;
             foreach (var skill in _playerSkill)
-                skill.Subscribe(transform.position, transform.rotation);
+                skill?.Subscribe(transform.position, transform.rotation);
         }
 
         private void Update()
@@ -55,7 +55,7 @@ namespace MiniJam167.Player
         {
             PlayerInput.PlayerMoved -= OnPlayerMoved;
             foreach (var skill in _playerSkill)
-                skill.Unsubscribe(transform.position, transform.rotation);
+                skill?.Unsubscribe(transform.position, transform.rotation);
         }
 
         private void Awake()

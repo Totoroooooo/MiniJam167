@@ -14,7 +14,7 @@ namespace MiniJam167.Player
 
         private void OnDestroy()
         {
-            _skill.Unsubscribe(Vector2.zero, Quaternion.identity);
+            _skill?.Unsubscribe(Vector2.zero, Quaternion.identity);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -24,7 +24,7 @@ namespace MiniJam167.Player
             
             Transform bodyTransform = body.transform;
             _skill.Subscribe(bodyTransform.position, bodyTransform.rotation);
-        }
+        }  
 
         private void OnTriggerExit2D(Collider2D other)
         {
