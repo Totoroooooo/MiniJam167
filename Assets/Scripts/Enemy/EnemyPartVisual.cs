@@ -66,10 +66,7 @@ namespace MiniJam167.Enemy
 
         private void OnInitialized()
         {
-            Color color = _normalGradient.Evaluate(0f);
-            foreach (VisualPart bone in _featherVisuals)
-                bone.Renderer.sprite = bone.NormalSprite;
-
+            _animator.Play("Open");
             OnEnabled();
         }
 
@@ -105,8 +102,6 @@ namespace MiniJam167.Enemy
         {
             _isCorrupted = true;
             Color color = _corruptedColor.Value;
-            foreach (VisualPart bone in _featherVisuals)
-                bone.Renderer.sprite = bone.CorruptedSprite;
             SetColor(_flashColor.Value);
             _flashTween?.Kill();
             _flashTween = DOVirtual.Color(_flashColor.Value, color, _flashDuration.Value, SetColor).Play();

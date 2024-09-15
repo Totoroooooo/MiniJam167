@@ -36,6 +36,12 @@ namespace MiniJam167.Enemy
 		public event Action Protected;
 		public event Action Died;
 
+		private void Awake()
+		{
+			_container.SetActive(false);
+			_corruptedContainer.SetActive(false);
+		}
+
 		public void OnHit(IHitter hitter)
 		{
 			float damage = Mathf.Min(_health, this.GetHitDamage(hitter));
@@ -64,7 +70,6 @@ namespace MiniJam167.Enemy
 
 		public void Enable()
 		{
-			Debug.Log($"{name} enabled", this);
 			_health = _maxHealth;
 			_collider.enabled = true;
 			Enabled?.Invoke();
