@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9181277244478643008}
   - component: {fileID: 7552205206253425917}
+  - component: {fileID: 8975171170264810424}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Tip_Feather_Down3
   m_TagString: Untagged
@@ -84,6 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &8975171170264810424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576663818267518844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1055404969491836411
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5356358506738379861}
   - component: {fileID: 7036563581535178097}
+  - component: {fileID: 8178088332664664310}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Tip_Feather_up1
   m_TagString: Untagged
@@ -169,6 +183,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &8178088332664664310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055404969491836411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1399440223769155743
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 65938005322624720}
   - component: {fileID: 8443957558183050035}
+  - component: {fileID: 5751916663109571689}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Mid_Feather_Down1
   m_TagString: Untagged
@@ -253,6 +280,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &5751916663109571689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399440223769155743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2335661266735093196
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +303,6 @@ GameObject:
   - component: {fileID: 7890722535605700509}
   - component: {fileID: 8803898756194655807}
   - component: {fileID: 2130099622014328234}
-  - component: {fileID: 2142552531333924866}
   - component: {fileID: 6280824498495073791}
   - component: {fileID: 7269684491633576363}
   m_Layer: 0
@@ -303,9 +341,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3167c53ace84df744a928c4b1614ac2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collider: {fileID: 2142552531333924866}
   _container: {fileID: 5583895364636221810}
   _corruptedContainer: {fileID: 2416576634718758664}
+  _hitCollisions:
+  - {fileID: 8532515483236940281}
+  - {fileID: 8653590310199017475}
+  - {fileID: 594648232523294905}
+  - {fileID: 7766589871266880822}
+  - {fileID: 5060960343788659111}
+  - {fileID: 8178088332664664310}
+  - {fileID: 9007683021627519077}
+  - {fileID: 4850568330232254318}
+  - {fileID: 1913488550071314270}
+  - {fileID: 8836115016063628367}
+  - {fileID: 8975171170264810424}
+  - {fileID: 203696845563438314}
+  - {fileID: 2601739497946812593}
+  - {fileID: 8258618822774645469}
+  - {fileID: 5751916663109571689}
+  - {fileID: 8994048213016122111}
   _maxHealth: 100
   _shield: 0
   _damageMultiplier: 1
@@ -403,53 +457,6 @@ MonoBehaviour:
   _disabledColor: {fileID: 11400000, guid: d96797eca309f6340b81944f81371201, type: 2}
   _enabledDuration: {fileID: 11400000, guid: 357f1d853b4390e4694f7ddd7c1e3f81, type: 2}
   _corruptedColor: {fileID: 11400000, guid: c106156342ed83d4693816cd56508074, type: 2}
---- !u!68 &2142552531333924866
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2335661266735093196}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.316849, y: -0.4235357}
-  - {x: -3.1850078, y: 1.5717868}
-  - {x: -6.161125, y: 2.201706}
-  - {x: -6.1701107, y: 2.5773509}
-  - {x: -4.1755323, y: 3.17722}
-  - {x: -2.130166, y: 2.8823826}
-  - {x: -1.0680888, y: 0.9839114}
-  - {x: 0.12225175, y: 0.057234645}
-  m_AdjacentStartPoint: {x: 0.1222517, y: 0.05723464}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 1
-  m_UseAdjacentEndPoint: 0
 --- !u!95 &6280824498495073791
 Animator:
   serializedVersion: 5
@@ -533,6 +540,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4387855278769155317}
   - component: {fileID: 960735726706231591}
+  - component: {fileID: 8532515483236940281}
+  - component: {fileID: 8191252228794223142}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Base_Skeleton
   m_TagString: Untagged
@@ -609,6 +618,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8532515483236940281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2935975042221022083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!68 &8191252228794223142
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2935975042221022083}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.7128462, y: -0.25624466}
+  - {x: -1.7946156, y: 0.0064415224}
+  - {x: -1.6448964, y: 0.27093995}
+  - {x: -0.63525367, y: 0.41402864}
+  - {x: 0.19782919, y: 0.4878536}
+  - {x: 0.5037687, y: 0.16460097}
+  - {x: 0.5318139, y: -0.107080996}
+  - {x: 0.23023772, y: -0.47094432}
+  m_AdjacentStartPoint: {x: 0.2302377, y: -0.4709443}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 1
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &2936217191514943771
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1564855993315606742}
   - component: {fileID: 8220034361731397251}
+  - component: {fileID: 203696845563438314}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Mid_Feather_Up2
   m_TagString: Untagged
@@ -694,6 +763,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &203696845563438314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2936217191514943771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3308396000994916210
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 61199129198814210}
   - component: {fileID: 5168448978701672212}
+  - component: {fileID: 4850568330232254318}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Tip_Feather_up2
   m_TagString: Untagged
@@ -779,6 +861,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &4850568330232254318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3308396000994916210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3345839922222309762
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,6 +883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 912590437260561561}
   - component: {fileID: 4476081334168188850}
+  - component: {fileID: 2601739497946812593}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Mid_Feather_Down2
   m_TagString: Untagged
@@ -863,6 +958,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &2601739497946812593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3345839922222309762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3612272695173917949
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5386484989469075513}
   - component: {fileID: 1813161397781248947}
+  - component: {fileID: 7766589871266880822}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Base_Feather_Down
   m_TagString: Untagged
@@ -947,6 +1055,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7766589871266880822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3612272695173917949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3650477906527529859
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,6 +1077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1802463320785458565}
   - component: {fileID: 6780011790366992575}
+  - component: {fileID: 8836115016063628367}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Tip_Feather_up3
   m_TagString: Untagged
@@ -1032,6 +1153,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &8836115016063628367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650477906527529859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4877050643296776293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,6 +1175,8 @@ GameObject:
   m_Component:
   - component: {fileID: 633178645020507111}
   - component: {fileID: 4776566194154200529}
+  - component: {fileID: 594648232523294905}
+  - component: {fileID: 2304743119216640540}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Base_Feather_Up
   m_TagString: Untagged
@@ -1117,6 +1252,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &594648232523294905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4877050643296776293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!68 &2304743119216640540
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4877050643296776293}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.021048188, y: -1.0577984}
+  - {x: -0.38275975, y: -1.0494535}
+  - {x: -0.6476424, y: -0.61858577}
+  - {x: -0.24556029, y: -0.14209735}
+  - {x: 0.04417509, y: -0.067789435}
+  - {x: 0.5453564, y: -0.1461485}
+  - {x: 0.89782506, y: -0.3964802}
+  - {x: 0.82976604, y: -0.59175026}
+  - {x: 0.627915, y: -0.78324306}
+  m_AdjacentStartPoint: {x: 0.627915, y: -0.7832431}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 1
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &5243114667250319134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,6 +1322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4126595496654270930}
   - component: {fileID: 5157801556515313235}
+  - component: {fileID: 1913488550071314270}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Tip_Feather_Down2
   m_TagString: Untagged
@@ -1201,6 +1397,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &1913488550071314270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5243114667250319134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5583895364636221810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1451,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8184303360405117819}
   - component: {fileID: 3701540429484824904}
+  - component: {fileID: 8653590310199017475}
+  - component: {fileID: 5763832686469096873}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Base_Feather
   m_TagString: Untagged
@@ -1318,6 +1528,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &8653590310199017475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5869320648094456879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!68 &5763832686469096873
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5869320648094456879}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.6818799, y: -0.80483574}
+  - {x: -1.7449923, y: -0.10308513}
+  - {x: -1.6448964, y: 0.27093995}
+  - {x: -0.6386967, y: 0.31120113}
+  - {x: 0.025345221, y: 0.49469855}
+  - {x: 0.42746195, y: 0.15474284}
+  - {x: 0.43895805, y: -0.08706464}
+  - {x: 0.23023772, y: -0.47094432}
+  m_AdjacentStartPoint: {x: 0.2302377, y: -0.4709443}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 1
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &6347290898982011076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,6 +1597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 298151952030189606}
   - component: {fileID: 1007691958783396260}
+  - component: {fileID: 9007683021627519077}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Tip_Feather_Down1
   m_TagString: Untagged
@@ -1402,6 +1672,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &9007683021627519077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6347290898982011076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6398792039647881936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,6 +1694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2471921546635121397}
   - component: {fileID: 8337543079622265421}
+  - component: {fileID: 5060960343788659111}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Mid_Skeleton
   m_TagString: Untagged
@@ -1492,6 +1775,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &5060960343788659111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6398792039647881936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7606492472660202615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,6 +1797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 528802104986390419}
   - component: {fileID: 7795215764919595313}
+  - component: {fileID: 8994048213016122111}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Protect
   m_TagString: Untagged
@@ -1576,6 +1872,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8994048213016122111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7606492472660202615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7855569399073750715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,6 +1894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4093254306516267820}
   - component: {fileID: 1893119993860431503}
+  - component: {fileID: 8258618822774645469}
   m_Layer: 0
   m_Name: T_Enemy_Phase1_Wing_Mid_Feather_Up1
   m_TagString: Untagged
@@ -1661,3 +1970,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &8258618822774645469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7855569399073750715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4e23c44e6414d8d949ea511ad09db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
