@@ -36,7 +36,13 @@ namespace MiniJam167.Player
         private Vector2 _playerMovementInput;
         private float _currentHealth;
 
+        public event Action Died;
+
         private void Start()
+        {
+        }
+
+        public void Init()
         {
             PlayerInput.PlayerMoved += OnPlayerMoved;
             foreach (var skill in _playerSkill)
@@ -76,6 +82,10 @@ namespace MiniJam167.Player
         private void Die()
         {
             gameObject.SetActive(false);
+            Died?.Invoke();
+            PlayerInput.PlayerMoved -= OnPlayerMoved;
+            foreach (var skill in _playerSkill)
+                skill?.Unsubscribe(transform.position, transform.rotation);
         }
         
         public void OnHit(IHitter hitter)
