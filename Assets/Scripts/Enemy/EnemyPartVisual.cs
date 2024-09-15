@@ -10,6 +10,7 @@ namespace MiniJam167.Enemy
         [Header("Components")]
         [SerializeField] private EnemyPart _part;
         [SerializeField] private VisualPart[] _featherVisuals;
+	[SerializeField] private VisualPart[] _boneVisuals;
         
         [Header("Settings")]
         [SerializeField] private Gradient _normalGradient;
