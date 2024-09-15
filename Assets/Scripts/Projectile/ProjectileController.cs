@@ -5,7 +5,7 @@ namespace MiniJam167.Projectile
 {
     public abstract class ProjectileController : MonoBehaviour
     {
-        protected Pool<ProjectileController> _pool;
+        private Pool<ProjectileController> _pool;
 
         public void Spawn(Vector2 position, Quaternion rotation, Pool<ProjectileController> pool)
         {
@@ -14,5 +14,13 @@ namespace MiniJam167.Projectile
         }
         
         protected abstract void OnSpawn(Vector2 position, Quaternion rotation);
+
+        protected void Release()
+        {
+            _pool.Release(this);
+            OnRelease();
+        }
+        
+        protected virtual void OnRelease() { }
     }
 }

@@ -17,7 +17,7 @@ namespace MiniJam167.Projectile
                 return;
             
             hittable.OnHit(this);
-            _pool.Release(this);
+            Release();
         }
     }
 }

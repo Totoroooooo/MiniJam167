@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{4278e324-3609-4cbe-91f8-fe60a72e1ebb}">
+		<property name="assetPath">
+			<value>SFX_Music/mp3/SFX_Music_Orchestral_01_mp3.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>122.88</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a617c101-33f6-45f7-ae1a-8b09337ed231}</destination>
+		</relationship>
+	</object>
+</objects>

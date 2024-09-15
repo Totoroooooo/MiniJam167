@@ -1,16 +1,16 @@
-using DG.Tweening;
-using MiniJam167.HitSystem;
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
+using MiniJam167.HitSystem;
 using MiniJam167.Utility;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace MiniJam167.Player
 {
     public class PlayerBody : MonoBehaviour, IHittable
-	{
+    {
+        [SerializeField] private TransformRadio _transformRadio;
+        
         [Header("Components")]
         [SerializeField] private Rigidbody2D _rigidBody;
         [SerializeField] private SpriteRenderer _spriteRenderer;
@@ -20,8 +20,9 @@ namespace MiniJam167.Player
         
         [Header("Movement")]
 		[SerializeField] private float _moveSpeed = 5;
-		[SerializeField][Range(0,1)] private float _rotationSpeed = 0.02f;
-		[SerializeField][Range(0,1)] private float _magnitudeThreshold = 0.2f;
+		[SerializeField] [Range(0,1)] private float _rotationSpeed = 0.02f;
+        [SerializeField] private float _magnitudeThreshold = 2;
+        [SerializeField] private float _magnitudeLimit = 0.1f;
         
         [Header("Health")]
 		[SerializeField] private int _maxHealth = 100;
@@ -37,65 +38,68 @@ namespace MiniJam167.Player
 		public float DamageMultiplier => 1;
 
         private float _currentHealth;
-        private Vector2 directionRaw;
-        private bool init;
+        private bool _init;
 
         public event Action Died;
-
-        private void Start()
-        {
-        }
-
-        public void Init()
-        {
-            init = true;
-            PlayerInput.PlayerMoved += OnPlayerMoved;
-            foreach (var skill in _playerSkill)
-                skill?.Subscribe(transform.position, transform.rotation);
-        }
-
-        private void OnDestroy()
-        {
-            PlayerInput.PlayerMoved -= OnPlayerMoved;
-            foreach (var skill in _playerSkill)
-                skill?.Unsubscribe(transform.position, transform.rotation);
-        }
 
         private void Awake()
         {
             _currentHealth = _maxHealth;
         }
 
+        private void Start()
+        {
+            _transformRadio.Value = transform;
+        }
+
+        private void OnDestroy()
+        {
+            PlayerInput.PlayerMoved -= OnPlayerMoved;
+            foreach (PlayerSkillMemo skill in _playerSkill)
+                skill?.Unsubscribe(transform.position, transform.rotation);
+        }
+
         private void FixedUpdate()
         {
-            if (!init) return;
-            var direction = directionRaw.normalized;
-            if (directionRaw.magnitude < _magnitudeThreshold)
-            {
-                _rigidBody.velocity = Vector3.zero;
-                return;
-            }
-            transform.up = Vector3.Lerp(transform.up, direction, _rotationSpeed);
-            _rigidBody.velocity = transform.up * _moveSpeed;
-
             var xValidPosition = Mathf.Clamp(transform.position.x, _bottomLeftCorner.position.x, _topRightCorner.position.x);
             var yValidPosition = Mathf.Clamp(transform.position.y, _bottomLeftCorner.position.y, _topRightCorner.position.y);
 
             transform.position = new Vector3(xValidPosition, yValidPosition, 0f);
         }
 
-        private void OnPlayerMoved(Vector2 position)
+        public void Init()
         {
-            directionRaw = position;
+            _init = true;
+            PlayerInput.PlayerMoved += OnPlayerMoved;
+            foreach (PlayerSkillMemo skill in _playerSkill)
+                skill?.Subscribe(transform.position, transform.rotation);
+        }
+
+        private void OnPlayerMoved(Vector2 directionRaw)
+        {
+            Vector2 direction = directionRaw.normalized;
+            float magnitude = directionRaw.magnitude;
+            if (magnitude < _magnitudeLimit || !_init)
+            {
+                _rigidBody.velocity = Vector3.zero;
+                return;
+            }
+
+            float moveSpeed = magnitude < _magnitudeThreshold
+                ? _moveSpeed * (magnitude - _magnitudeLimit) / (_magnitudeThreshold - _magnitudeLimit)
+                : _moveSpeed;
+            transform.up = Vector3.Lerp(transform.up, direction, _rotationSpeed);
+            _rigidBody.velocity = transform.up * moveSpeed;
         }
 
         private void Die()
         {
             gameObject.SetActive(false);
-            Died?.Invoke();
+            _init = false;
             PlayerInput.PlayerMoved -= OnPlayerMoved;
-            foreach (var skill in _playerSkill)
+            foreach (PlayerSkillMemo skill in _playerSkill)
                 skill?.Unsubscribe(transform.position, transform.rotation);
+            Died?.Invoke();
         }
         
         public void OnHit(IHitter hitter)
@@ -112,7 +116,7 @@ namespace MiniJam167.Player
         {
             if (!collider.TryGetComponent(out IHitter hitter))
                 return;
-            this.OnHit(hitter);
+            OnHit(hitter);
         }
 
     }
