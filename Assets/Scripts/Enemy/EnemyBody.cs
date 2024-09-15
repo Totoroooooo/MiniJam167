@@ -44,6 +44,7 @@ namespace MiniJam167.Enemy
 		public event HealthEvent HealthChanged;
 		public event PhaseEvent PhaseChanged;
 		public event Action Died;
+		public event Action Hitted;
 		
         public void Init()
         {
@@ -130,7 +131,7 @@ namespace MiniJam167.Enemy
 			foreach (EnemyPart part in _protectionParts)
 				if (part.Protect(hitter))
 					return;
-			
+			Hitted?.Invoke();
 			float damage = Mathf.Min(_phaseHealth, this.GetHitDamage(hitter));
 			_phaseHealth -= damage;
 			_health -= damage;

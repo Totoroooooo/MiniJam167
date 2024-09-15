@@ -1,29 +1,25 @@
 using UnityEngine;
 
-namespace MiniJam167.Enemy
+namespace MiniJam167.Sound
 {
-    public class EnemySound : MonoBehaviour
+    public class PlayerSkillSound : MonoBehaviour
     {
         [SerializeField] FMODUnity.StudioEventEmitter _eventEmitter;
-        [SerializeField] EnemyBody _enemyBody;
+        [SerializeField] PlayerSkillDefault _playerSkill;
 
         private void Start()
         {
-            _enemyBody.Hitted += PlaySound;
-            _enemyBody.Died += PlaySound;
+            _playerSkill.Launched += PlaySound;
         }
 
         private void OnDestroy()
         {
-            _enemyBody.Hitted += PlaySound;
-            _enemyBody.Died -= PlaySound;
+            _playerSkill.Launched -= PlaySound;
         }
 
         public void PlaySound()
         {
             _eventEmitter.Play();
         }
-         
     }
-
 }

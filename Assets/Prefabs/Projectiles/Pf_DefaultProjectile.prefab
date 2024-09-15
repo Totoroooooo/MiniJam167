@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e67b5f58407b1442b0a7a6495cf21af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SoundCaller: {fileID: 11400000, guid: 3e27c0a318680b9438199deb1d85cf04, type: 2}
   _damage: 10
   _lethality: 0
   _rb: {fileID: 2509563566510564824}
