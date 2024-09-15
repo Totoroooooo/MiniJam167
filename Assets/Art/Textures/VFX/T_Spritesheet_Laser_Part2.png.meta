@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 41e160f305a3f6549891dd89317e8523
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T_Laser_ShootStart_4
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 3451
+        width: 1759
+        height: 101
+      alignment: 9
+      pivot: {x: 0.03, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66b9b6997b82df40b928962f48472ce
+      internalID: 1409441644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Laser_ShootLoop_1
+      rect:
+        serializedVersion: 2
+        x: 2661
+        y: 3376
+        width: 1800
+        height: 307
+      alignment: 9
+      pivot: {x: 0.03, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46769ae26d3c084c92c4fb6db664c00
+      internalID: -277363323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Laser_ShootLoop_2
+      rect:
+        serializedVersion: 2
+        x: 5140
+        y: 3342
+        width: 1736
+        height: 311
+      alignment: 9
+      pivot: {x: 0.03, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c116b57f9c3f78049bb985463553fedb
+      internalID: -434975701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Laser_ShootLoop_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1355
+        width: 1793
+        height: 371
+      alignment: 9
+      pivot: {x: 0.03, y: 0.44}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0e6343890739c4885789bc15335dab
+      internalID: -1511509171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Laser_ShootLoop_4
+      rect:
+        serializedVersion: 2
+        x: 2653
+        y: 1378
+        width: 1766
+        height: 307
+      alignment: 9
+      pivot: {x: 0.03, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f68e4f5eeecf94fb3f5e8b6f0854b1
+      internalID: 1456683217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Spritesheet_Laser_Part2_5
+      rect:
+        serializedVersion: 2
+        x: 5438
+        y: 1588
+        width: 57
+        height: 30
+      alignment: 9
+      pivot: {x: 0.03, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933dfe40bdc407949aa3fa940beb81ac
+      internalID: 1542020339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Spritesheet_Laser_Part2_6
+      rect:
+        serializedVersion: 2
+        x: 5537
+        y: 1576
+        width: 82
+        height: 23
+      alignment: 9
+      pivot: {x: 0.03, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec247334fadb2674aa1192171dfadc5a
+      internalID: -1367353806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Spritesheet_Laser_Part2_7
+      rect:
+        serializedVersion: 2
+        x: 6647
+        y: 1569
+        width: 67
+        height: 26
+      alignment: 9
+      pivot: {x: 0.03, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f63cc7844900fb499e6df5db88f6d7b
+      internalID: 348038127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Laser_ShootEnd
+      rect:
+        serializedVersion: 2
+        x: 5181
+        y: 1460
+        width: 1739
+        height: 120
+      alignment: 9
+      pivot: {x: 0.03, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f2b1ff4239bd94aa9a48a1c2e30f7f
+      internalID: 722564564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Spritesheet_Laser_Part2_9
+      rect:
+        serializedVersion: 2
+        x: 6868
+        y: 1550
+        width: 90
+        height: 38
+      alignment: 9
+      pivot: {x: 0.03, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229638b8d5f260c40a06910a5aaddfa1
+      internalID: 1621315322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Spritesheet_Laser_Part2_10
+      rect:
+        serializedVersion: 2
+        x: 5384
+        y: 1445
+        width: 130
+        height: 30
+      alignment: 9
+      pivot: {x: 0.03, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886cb1cfaeacd81409ab581e240e8c7c
+      internalID: 140282176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Spritesheet_Laser_Part2_11
+      rect:
+        serializedVersion: 2
+        x: 6193
+        y: 1453
+        width: 135
+        height: 26
+      alignment: 9
+      pivot: {x: 0.03, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132c1173470f1e449b5a5d44d646fbd4
+      internalID: -1714038735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      T_Laser_ShootEnd: 722564564
+      T_Laser_ShootLoop_1: -277363323
+      T_Laser_ShootLoop_2: -434975701
+      T_Laser_ShootLoop_3: -1511509171
+      T_Laser_ShootLoop_4: 1456683217
+      T_Laser_ShootStart_4: 1409441644
+      T_Spritesheet_Laser_Part2_10: 140282176
+      T_Spritesheet_Laser_Part2_11: -1714038735
+      T_Spritesheet_Laser_Part2_5: 1542020339
+      T_Spritesheet_Laser_Part2_6: -1367353806
+      T_Spritesheet_Laser_Part2_7: 348038127
+      T_Spritesheet_Laser_Part2_9: 1621315322
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
