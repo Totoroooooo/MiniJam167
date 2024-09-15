@@ -14,7 +14,7 @@ namespace MiniJam167.Player
 
         private void OnDestroy()
         {
-            _skill.Unsubscribe();
+            _skill?.Unsubscribe(Vector2.zero, Quaternion.identity);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -24,17 +24,17 @@ namespace MiniJam167.Player
             
             Transform bodyTransform = body.transform;
             _skill.Subscribe(bodyTransform.position, bodyTransform.rotation);
-        }
+        }  
 
         private void OnTriggerExit2D(Collider2D other)
         {
             if (!other.TryGetComponent(out PlayerBody body))
                 return;
-            
-            _skill.Unsubscribe();
+            Transform bodyTransform = body.transform;
+            _skill.Unsubscribe(bodyTransform.position, bodyTransform.rotation);
         }
 
-        protected override void OnSpawn(Vector2 position, Vector2 direction)
+        protected override void OnSpawn(Vector2 position, Quaternion rotation)
         {
             
         }

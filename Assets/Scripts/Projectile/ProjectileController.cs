@@ -7,12 +7,12 @@ namespace MiniJam167.Projectile
     {
         protected Pool<ProjectileController> _pool;
 
-        public void Spawn(Vector2 position, Vector2 direction, Pool<ProjectileController> pool)
+        public void Spawn(Vector2 position, Quaternion rotation, Pool<ProjectileController> pool)
         {
             _pool = pool;
-            OnSpawn(position, direction);
+            OnSpawn(position, rotation);
         }
         
-        protected abstract void OnSpawn(Vector2 position, Vector2 direction);
+        protected abstract void OnSpawn(Vector2 position, Quaternion rotation);
     }
 }
