@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.00.00">
-	<object class="ParameterPreset" id="{02f6d931-3e73-45ad-bac5-47f5a744eb36}">
+	<object class="ParameterPreset" id="{9794e2da-f0f9-48a4-a3aa-9de450d4789b}">
 		<property name="name">
-			<value>Volume SFX</value>
+			<value>Tracker Release</value>
 		</property>
 		<relationship name="folder">
 			<destination>{2acce1de-7902-4e60-88a8-e6c166dd6bfc}</destination>
 		</relationship>
 		<relationship name="parameter">
-			<destination>{661815cf-f674-481a-ae07-5b9b05721c0a}</destination>
+			<destination>{5d1d1a2a-7afd-4bb7-8861-a97d64c51f9f}</destination>
 		</relationship>
 	</object>
-	<object class="GameParameter" id="{661815cf-f674-481a-ae07-5b9b05721c0a}">
-		<property name="maximum">
-			<value>10</value>
-		</property>
+	<object class="GameParameter" id="{5d1d1a2a-7afd-4bb7-8861-a97d64c51f9f}">
 		<property name="initialValue">
 			<value>0</value>
 		</property>
