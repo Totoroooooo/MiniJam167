@@ -2,6 +2,7 @@ using DG.Tweening;
 using MiniJam167.HitSystem;
 using System;
 using System.Collections.Generic;
+using MiniJam167.Utility;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
 
@@ -9,15 +10,23 @@ namespace MiniJam167.Player
 {
     public class PlayerBody : MonoBehaviour, IHittable
 	{
+        [Header("Components")]
         [SerializeField] private Rigidbody2D _rigidBody;
-        [Space]
+        [SerializeField] private SpriteRenderer _spriteRenderer;
+        
+        [Header("Skills")]
         [SerializeField] private List<PlayerSkillMemo> _playerSkill;
+        
+        [Header("Movement")]
 		[SerializeField] private float _moveSpeed = 5;
+        
+        [Header("Health")]
 		[SerializeField] private int _maxHealth = 100;
         [SerializeField] private Gradient _playerColor;
-        [SerializeField] private SpriteRenderer _spriteRenderer;
-        [SerializeField] private Color _hitColor;
+        [SerializeField] private ColorMemo _hitColor;
         [SerializeField] private float _hitDuration = 1f;
+        
+        [Header("Movement")]
         [SerializeField] private Transform _bottomLeftCorner;
         [SerializeField] private Transform _topRightCorner;
 
@@ -73,7 +82,7 @@ namespace MiniJam167.Player
 		{
             float damage = this.GetHitDamage(hitter);
             _currentHealth -= damage;
-            _spriteRenderer.color = _hitColor;
+            _spriteRenderer.color = _hitColor.Value;
             _spriteRenderer.DOColor(_playerColor.Evaluate(_currentHealth / _maxHealth), _hitDuration);
             if (_currentHealth <= 0)
                 Die();

@@ -1,19 +1,14 @@
-using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace MiniJam167.Player.Skills
 {
-    public class SkillDefault : PlayerSkillMemo
+    [CreateAssetMenu(fileName = "Mm_Projectile_", menuName = "MiniJam167/Skills/Projectile")]
+    public class SkillDefault : SkillProjectile
     {
         [SerializeField] private float _bulletPerSecond;
 
-
         private bool _isPressingKey;
         private float _timer;
-
-        public event PlayerInput.PlayerInputEvent PlayerShot;
 
         protected override void OnPlayerKey(Vector2 position, Quaternion rotation, float deltaTime)
         {
@@ -23,7 +18,6 @@ namespace MiniJam167.Player.Skills
 
             Shoot(position, rotation);
             _timer = 0;
-
         }
 
         protected override void OnPlayerkeyDown(Vector2 position, Quaternion rotation)
@@ -42,11 +36,6 @@ namespace MiniJam167.Player.Skills
 
         protected override void OnUnsubscribe(Vector2 vector2, Quaternion rotation)
         {
-        }
-
-        private void Shoot(Vector2 position, Quaternion rotation) 
-        {
-            PlayerShot?.Invoke(position, rotation);
         }
 
 
