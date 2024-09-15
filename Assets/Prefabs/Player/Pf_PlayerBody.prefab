@@ -173,8 +173,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transformRadio: {fileID: 11400000, guid: 1ad4381f928a69843a97a2428d2104f1, type: 2}
+  _playerRadio: {fileID: 11400000, guid: 5174c77d7ec9d09429aaed46c5c24b81, type: 2}
   _rigidBody: {fileID: 6914657024348885958}
   _spriteRenderer: {fileID: 7041186781671640906}
+  _healParticles: {fileID: 0}
   _playerSkill:
   - {fileID: 11400000, guid: 443bd97ccd4c4e447928fca50f91d8e1, type: 2}
   _moveSpeed: 8

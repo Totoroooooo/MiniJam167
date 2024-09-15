@@ -84,6 +84,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &1154672907457865203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2919402730572340743}
+  - component: {fileID: 8750807408349825689}
+  m_Layer: 8
+  m_Name: Heal Zone Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2919402730572340743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154672907457865203}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6406575235320401087}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8750807408349825689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154672907457865203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233c5261e42590c47a3ac829c96e0585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pool:
+    _original: {fileID: 7874204429332718489, guid: bd6c411721e7281418fecec9ea30c92f, type: 3}
 --- !u!1 &1820547417071784715
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +260,9 @@ Transform:
   - {fileID: 289864480943343279}
   - {fileID: 6215300979084391891}
   - {fileID: 250276248789448728}
+  - {fileID: 7572349868296604774}
+  - {fileID: 2919402730572340743}
+  - {fileID: 1693706268763352835}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1659824954508772483
@@ -671,6 +720,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &6961314642113274997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1693706268763352835}
+  - component: {fileID: 805259135677994870}
+  m_Layer: 8
+  m_Name: Homing Zone Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1693706268763352835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6961314642113274997}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6406575235320401087}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &805259135677994870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6961314642113274997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233c5261e42590c47a3ac829c96e0585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pool:
+    _original: {fileID: 7874204429332718489, guid: bd6c411721e7281418fecec9ea30c92f, type: 3}
 --- !u!1 &7160714334236463815
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +896,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pool:
     _original: {fileID: 6368290622121501231, guid: 02e8456ea410a8a4da59f24591f37548, type: 3}
+--- !u!1 &8368253505912320052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7572349868296604774}
+  - component: {fileID: 3070456963806798496}
+  m_Layer: 8
+  m_Name: Charged Projectile Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7572349868296604774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368253505912320052}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6406575235320401087}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3070456963806798496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368253505912320052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233c5261e42590c47a3ac829c96e0585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pool:
+    _original: {fileID: 4112921702292249248, guid: 314ec978c2dbb1042bba192cb242352a, type: 3}
 --- !u!1 &8736204194607320592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,20 +1428,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7233515518226906844, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
       propertyPath: _fireRate
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7233515518226906844, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
       propertyPath: _projectilePool
       value: 
-      objectReference: {fileID: 5070447635391167762}
+      objectReference: {fileID: 8750807408349825689}
     - target: {fileID: 7233515518226906844, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
       propertyPath: _corruptFireRate
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7233515518226906844, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
       propertyPath: _spawns.Array.data[0].Points.Array.data[0]
       value: 
       objectReference: {fileID: 6406575235320401087}
+    - target: {fileID: 7233515518226906844, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
+      propertyPath: _spawns.Array.data[0].RotationRange.Array.data[0].x
+      value: 225
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233515518226906844, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
+      propertyPath: _spawns.Array.data[0].RotationRange.Array.data[0].y
+      value: 360
+      objectReference: {fileID: 0}
     - target: {fileID: 7854556856406929642, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
       propertyPath: m_LocalScale.x
       value: -0.7

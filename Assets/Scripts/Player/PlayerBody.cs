@@ -10,10 +10,12 @@ namespace MiniJam167.Player
     public class PlayerBody : MonoBehaviour, IHittable
     {
         [SerializeField] private TransformRadio _transformRadio;
+        [SerializeField] private PlayerRadio _playerRadio;
         
         [Header("Components")]
         [SerializeField] private Rigidbody2D _rigidBody;
         [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private ParticleSystem _healParticles;
         
         [Header("Skills")]
         [SerializeField] private List<PlayerSkillMemo> _playerSkill;
@@ -50,10 +52,13 @@ namespace MiniJam167.Player
         private void Start()
         {
             _transformRadio.Value = transform;
+            _playerRadio.Value = this;
         }
 
         private void OnDestroy()
         {
+            _transformRadio.Value = null;
+            _playerRadio.Value = null;
             PlayerInput.PlayerMoved -= OnPlayerMoved;
             foreach (PlayerSkillMemo skill in _playerSkill)
                 skill?.Unsubscribe(transform.position, transform.rotation);
@@ -112,12 +117,11 @@ namespace MiniJam167.Player
                 Die();
         }
 
-        private void OnTriggerEnter2D(Collider2D collider)
+        public void Heal(float value)
         {
-            if (!collider.TryGetComponent(out IHitter hitter))
-                return;
-            OnHit(hitter);
+            _currentHealth = Mathf.Min(_currentHealth + value, _maxHealth);
+            _spriteRenderer.DOColor(_playerColor.Evaluate(_currentHealth / _maxHealth), _hitDuration);
+            _healParticles?.Play();
         }
-
     }
 }

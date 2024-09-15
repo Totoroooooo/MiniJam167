@@ -1,16 +1,27 @@
-using System;
+using DG.Tweening;
 using MiniJam167.Projectile;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace MiniJam167.Player
 {
+    [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerSkillGiver : ProjectileController
     {
+        [Header("PComponents")]
+        [SerializeField] private Rigidbody2D _rigidbody;
+        [Space]
         [SerializeField] private PlayerSkillMemo _skill;
         [Space]
+        [SerializeField] private float _lifeTime = 30;
         [SerializeField] private float _moveSpeed;
-        [SerializeField] private float _rotationSpeed;
+        [SerializeField] private Vector2 _rotationSpeedRange;
+        [SerializeField] private Vector2 _visualRotationSpeedRange;
+
+        private float _rotationSpeed;
+        private float _visualRotationSpeed;
+        private float _currentRotation;
+        private float _currentVisualRotation;
+        private Tween _lifeTween;
 
         private void OnDestroy()
         {
@@ -34,9 +45,26 @@ namespace MiniJam167.Player
             _skill.Unsubscribe(bodyTransform.position, bodyTransform.rotation);
         }
 
+        private void Update()
+        {
+            _currentVisualRotation = (_currentVisualRotation + _visualRotationSpeed * Time.deltaTime) % 360;
+            transform.rotation = Quaternion.Euler(0, 0, _currentVisualRotation);
+            
+            _currentRotation = (_currentRotation + _rotationSpeed * Time.deltaTime) % 360;
+            _rigidbody.velocity = Quaternion.Euler(0, 0, _currentRotation) * Vector3.one * _moveSpeed;
+        }
+
         protected override void OnSpawn(Vector2 position, Quaternion rotation)
         {
-            
+            _currentVisualRotation = _currentRotation = rotation.eulerAngles.z;
+            _rotationSpeed = Random.Range(_rotationSpeedRange.x, _rotationSpeedRange.y);
+            _visualRotationSpeed = Random.Range(_visualRotationSpeedRange.x, _visualRotationSpeedRange.y);
+            _lifeTween = DOVirtual.DelayedCall(_lifeTime, Release).Play();
+        }
+
+        protected override void OnRelease()
+        {
+            _lifeTween?.Kill();
         }
     }
 }
