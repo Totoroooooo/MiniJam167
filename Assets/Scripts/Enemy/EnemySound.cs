@@ -9,12 +9,20 @@ namespace MiniJam167
     {
         [SerializeField] FMODUnity.StudioEventEmitter _eventEmitter;
         [SerializeField] EnemyBody _enemyBody;
+        [SerializeField] PlayerSkillDefault __playerSkill;
 
 
         private void Start()
         {
             _enemyBody.Died += PlaySound;
+            __playerSkill.Launched += PlaySound;
         }
+
+        private void OnDestroy()
+        {
+            _enemyBody.Died -= PlaySound;
+        }
+
         public void PlaySound()
         {
             _eventEmitter.Play();
