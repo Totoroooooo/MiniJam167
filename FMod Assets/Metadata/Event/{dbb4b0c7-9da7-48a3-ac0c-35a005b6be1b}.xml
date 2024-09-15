@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{dbb4b0c7-9da7-48a3-ac0c-35a005b6be1b}">
 		<property name="name">
-			<value>Phase 1 synth</value>
+			<value>Music</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -37,6 +37,9 @@
 		<relationship name="parameters">
 			<destination>{6fbf033f-b04b-4ec2-b95c-d7cc9d739876}</destination>
 			<destination>{46a04e2f-4c6d-454a-b8ae-0eec3e13cffa}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{98d9bfaa-da1b-4a98-8874-7d1938f626a5}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{fcfdc801-1657-49c0-81a2-2ad12cdff123}">
@@ -144,7 +147,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{3522ac83-6f17-407d-ab3f-6812401b4793}">
 		<property name="name">
-			<value>Audio 1</value>
+			<value>Synthwave</value>
 		</property>
 		<relationship name="automators">
 			<destination>{f11afee9-7279-4e55-afac-cea9f60fa132}</destination>
@@ -180,7 +183,7 @@
 			<value>3.5</value>
 		</property>
 		<property name="name">
-			<value>Audio 2</value>
+			<value>Orchestral</value>
 		</property>
 		<relationship name="automators">
 			<destination>{a5b6a960-a8dc-49d6-9d97-83ebf3e63c32}</destination>
@@ -223,7 +226,7 @@
 			<destination>{424dbaca-af72-4c71-a502-4c45a5c4db9a}</destination>
 		</relationship>
 		<relationship name="markerTrack">
-			<destination>{9355f1f9-d6f1-4f79-8d4f-59c101562bad}</destination>
+			<destination>{f79611da-2119-4bc9-94eb-8ed73e836e9a}</destination>
 		</relationship>
 		<relationship name="destination">
 			<destination>{9a9dbd7f-4e8f-4d11-a0bf-1dfa8c128b2b}</destination>
@@ -461,7 +464,7 @@
 			<value>10</value>
 		</property>
 		<property name="value">
-			<value>7.5</value>
+			<value>5.5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{5ed82961-3907-4be6-acc8-c4b7e0686e0d}">
@@ -469,7 +472,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-34</value>
+			<value>-80</value>
 		</property>
 	</object>
 </objects>
