@@ -7,7 +7,7 @@ namespace MiniJam167.Player
         public void Subscribe(Vector2 position, Quaternion rotation)
         {
             PlayerInput.PlayerKeyDown += OnPlayerkeyDown;
-            PlayerInput.PlayerKeyDown += OnPlayerkeyUp;
+            PlayerInput.PlayerKeyUp += OnPlayerkeyUp;
             PlayerInput.PlayerKeyPressed += OnPlayerKey;
             OnSubcribe(position, rotation);
         }
@@ -15,7 +15,7 @@ namespace MiniJam167.Player
         public void Unsubscribe(Vector2 position, Quaternion rotation)
         {
             PlayerInput.PlayerKeyDown -= OnPlayerkeyDown;
-            PlayerInput.PlayerKeyDown -= OnPlayerkeyUp;
+            PlayerInput.PlayerKeyUp -= OnPlayerkeyUp;
             PlayerInput.PlayerKeyPressed -= OnPlayerKey;
             OnUnsubscribe(position, rotation);
         }

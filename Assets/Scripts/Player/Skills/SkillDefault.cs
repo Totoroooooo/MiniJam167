@@ -13,6 +13,8 @@ namespace MiniJam167.Player.Skills
         protected override void OnPlayerKey(Vector2 position, Quaternion rotation, float deltaTime)
         {
             _timer += deltaTime;
+            Debug.Log(_isPressingKey);
+            Debug.Log(_timer);
             if (!_isPressingKey || _timer < 1 / _bulletPerSecond)
                 return;
 

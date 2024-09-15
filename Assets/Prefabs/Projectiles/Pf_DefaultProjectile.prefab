@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 141466701060822066}
   - component: {fileID: 2509563566510564824}
   - component: {fileID: 5685102541204107273}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pf_DefaultProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,10 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e67b5f58407b1442b0a7a6495cf21af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 5
+  _damage: 10
   _lethality: 0
   _rb: {fileID: 2509563566510564824}
-  _speed: 3
+  _speed: 10
 --- !u!50 &2509563566510564824
 Rigidbody2D:
   serializedVersion: 4
