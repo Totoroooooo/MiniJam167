@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{ded0953e-bb80-4b88-8077-8b9765aec9cc}">
+		<property name="assetPath">
+			<value>SFX_Attacks/wav/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a617c101-33f6-45f7-ae1a-8b09337ed231}</destination>
+		</relationship>
+	</object>
+</objects>

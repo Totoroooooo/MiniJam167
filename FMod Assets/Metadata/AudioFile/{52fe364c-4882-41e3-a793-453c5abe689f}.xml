@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{52fe364c-4882-41e3-a793-453c5abe689f}">
+		<property name="assetPath">
+			<value>SFX_Events/mp3/SFX_Event_BossKill_01_mp3.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>11.039999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a617c101-33f6-45f7-ae1a-8b09337ed231}</destination>
+		</relationship>
+	</object>
+</objects>
