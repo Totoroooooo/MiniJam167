@@ -805,17 +805,9 @@ PrefabInstance:
       value: Pf_PlayerBody
       objectReference: {fileID: 0}
     - target: {fileID: 6034496265475030772, guid: c58a242c653ee7d458b7db550cb38949, type: 3}
-      propertyPath: _moveSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6034496265475030772, guid: c58a242c653ee7d458b7db550cb38949, type: 3}
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 981881202}
-    - target: {fileID: 6034496265475030772, guid: c58a242c653ee7d458b7db550cb38949, type: 3}
-      propertyPath: _rotationSpeed
-      value: 0.51
-      objectReference: {fileID: 0}
     - target: {fileID: 6034496265475030772, guid: c58a242c653ee7d458b7db550cb38949, type: 3}
       propertyPath: _topRightCorner
       value: 
@@ -824,10 +816,6 @@ PrefabInstance:
       propertyPath: _bottomLeftCorner
       value: 
       objectReference: {fileID: 1232532257}
-    - target: {fileID: 6034496265475030772, guid: c58a242c653ee7d458b7db550cb38949, type: 3}
-      propertyPath: _magnitudeThreshold
-      value: 0.365
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

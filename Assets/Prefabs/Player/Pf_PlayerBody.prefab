@@ -176,7 +176,10 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 7041186781671640906}
   _playerSkill:
   - {fileID: 11400000, guid: 443bd97ccd4c4e447928fca50f91d8e1, type: 2}
-  _moveSpeed: 5
+  _moveSpeed: 8
+  _rotationSpeed: 0.2
+  _magnitudeThreshold: 1
+  _magnitudeLimit: 0.1
   _maxHealth: 100
   _playerColor:
     serializedVersion: 2
