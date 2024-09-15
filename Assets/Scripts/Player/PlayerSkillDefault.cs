@@ -11,7 +11,7 @@ namespace MiniJam167
 
         protected override void OnSpawn(Vector2 position, Quaternion rotation)
         {
-            _rb.velocity = Vector2.up * _speed;
+            _rb.velocity = rotation * Vector2.up * _speed;
         }
 
     }

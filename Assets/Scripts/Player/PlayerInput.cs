@@ -15,15 +15,18 @@ namespace MiniJam167.Player
 
         private void Update()
         {
-            Vector2 playerMovementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            PlayerMoved?.Invoke(playerMovementInput.normalized);
+            Vector3 playerMovementInput = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 playerPosition = transform.position;
+            Vector3 direction = playerMovementInput - playerPosition;
+            direction.z = 0;
+            PlayerMoved?.Invoke(direction);
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
                 PlayerKeyDown?.Invoke(transform.position, transform.rotation);
-            else if (Input.GetKeyUp(KeyCode.Space))
+            else if (Input.GetKeyUp(KeyCode.Mouse0))
                 PlayerKeyUp?.Invoke(transform.position, transform.rotation);
 
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Mouse0))
             {
                 PlayerKeyPressed?.Invoke(transform.position, transform.rotation, Time.deltaTime);
             }
