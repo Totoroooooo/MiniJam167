@@ -32,6 +32,7 @@ namespace MiniJam167.Enemy
 
         private void Awake()
         {
+            _part.Initialized += OnEnabled;
             _part.Enabled += OnEnabled;
             _part.Disabled += OnDisabled;
             _part.Corrupted += OnCorrupted;
@@ -39,6 +40,7 @@ namespace MiniJam167.Enemy
 
         private void OnDestroy()
         {
+            _part.Initialized -= OnEnabled;
             _part.Enabled -= OnEnabled;
             _part.Disabled -= OnDisabled;
             _part.Corrupted -= OnCorrupted;

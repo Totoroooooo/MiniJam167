@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using MiniJam167.Utility;
 using UnityEngine;
@@ -52,6 +53,10 @@ namespace MiniJam167.Enemy
             _body.HealthChanged += OnHealthChanged;
             _body.PhaseChanged += OnPhaseChanged;
             _body.Died += OnDied;
+        }
+
+        private void Start()
+        {
             foreach (EnemyPartVisual part in _parts)
                 part.Init(this);
         }

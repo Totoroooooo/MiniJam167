@@ -64,6 +64,7 @@ namespace MiniJam167.Enemy
 
 		public void Enable()
 		{
+			Debug.Log($"{name} enabled", this);
 			_health = _maxHealth;
 			_collider.enabled = true;
 			Enabled?.Invoke();

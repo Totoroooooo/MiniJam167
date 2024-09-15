@@ -154,14 +154,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pf_Enemy Body
       objectReference: {fileID: 0}
-    - target: {fileID: 2267368348664630117, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
-      propertyPath: GameManager
-      value: 
-      objectReference: {fileID: 981881202}
-    - target: {fileID: 2267368348664630117, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
-      propertyPath: EventEmitterDie
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2508352400917029108, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.23
@@ -177,18 +169,6 @@ PrefabInstance:
     - target: {fileID: 3871760186536829752, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4478778860035667063, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406575235320401087, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.55655
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406575235320401087, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.52385
       objectReference: {fileID: 0}
     - target: {fileID: 6406575235320401087, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
       propertyPath: m_LocalPosition.x
@@ -233,13 +213,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2212431418978003656, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1277094416}
-    - targetCorrespondingSourceObject: {fileID: 2212431418978003656, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1277094415}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
 --- !u!1 &981881201
 GameObject:
@@ -345,67 +319,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1277094408 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2212431418978003656, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
-  m_PrefabInstance: {fileID: 899869439}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1277094412 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2267368348664630117, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
   m_PrefabInstance: {fileID: 899869439}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277094408}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1fb911bf4212a843b5be77ad170ffb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1277094415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277094408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -2059167609
-      Data2: 1233225348
-      Data3: 1166663317
-      Data4: 703892236
-    Path: event:/Music/New Event
-  Event: 
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
---- !u!114 &1277094416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277094408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac2b986a3e04e6489e16ad394f7631f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _eventEmitter: {fileID: 0}
-  _enemyBody: {fileID: 1277094412}
 --- !u!1 &1397219881
 GameObject:
   m_ObjectHideFlags: 0

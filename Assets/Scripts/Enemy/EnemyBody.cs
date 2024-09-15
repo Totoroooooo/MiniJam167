@@ -44,12 +44,7 @@ namespace MiniJam167.Enemy
 		public event HealthEvent HealthChanged;
 		public event PhaseEvent PhaseChanged;
 		public event Action Died;
-
-        private void Start()
-		{
-			
-		}
-
+		
         public void Init()
         {
 	        _normalCollider.enabled = true;

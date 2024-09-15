@@ -74,7 +74,7 @@ namespace MiniJam167.Player
         {
             Vector2 direction = directionRaw.normalized;
             float magnitude = directionRaw.magnitude;
-            if (magnitude < _magnitudeLimit)
+            if (magnitude < _magnitudeLimit || !_init)
             {
                 _rigidBody.velocity = Vector3.zero;
                 return;
