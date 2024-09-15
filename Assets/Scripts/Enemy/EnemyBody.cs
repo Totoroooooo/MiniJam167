@@ -16,6 +16,7 @@ namespace MiniJam167.Enemy
 		[Header("References")]
 		[SerializeField] private Collider2D _normalCollider;
 		[SerializeField] private Collider2D _corruptedCollider;
+		[SerializeField] private EnemyPart[] _protectionParts;
 
 		[Header("Phases")]
 		[SerializeField] private Phase[] _phases;
@@ -23,6 +24,7 @@ namespace MiniJam167.Enemy
 		[Header("Health")]
 		[SerializeField] private float _shield;
 		[SerializeField] private float _damageMultiplier = 1;
+		
 
 		public float Shield => _shield;
 		public float DamageMultiplier => _damageMultiplier;
@@ -129,6 +131,10 @@ namespace MiniJam167.Enemy
 		
 		public void OnHit(IHitter hitter)
 		{
+			foreach (EnemyPart part in _protectionParts)
+				if (part.Protect(hitter))
+					return;
+			
 			float damage = Mathf.Min(_phaseHealth, this.GetHitDamage(hitter));
 			_phaseHealth -= damage;
 			_health -= damage;

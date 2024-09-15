@@ -9,6 +9,7 @@ namespace MiniJam167.Enemy
 	{
 		[SerializeField] private Collider2D _collider;
 		[SerializeField] private GameObject _container;
+		[SerializeField] private GameObject _corruptedContainer;
 		[Space]
 		[SerializeField] private float _maxHealth = 100f;
 		[SerializeField] private float _shield;
@@ -21,6 +22,7 @@ namespace MiniJam167.Enemy
 		
 		private float _health;
 		private Tween _tween;
+		private bool _isCorrupted;
 		
 		public delegate void TimedEvent(float duration);
 		public delegate void HitEvent(float health, float maxHealth, float damage);
@@ -31,6 +33,7 @@ namespace MiniJam167.Enemy
 		public event TimedEvent Disabled;
 		public event HitEvent Hit;
 		public event Action Corrupted;
+		public event Action Protected;
 		public event Action Died;
 
 		public void OnHit(IHitter hitter)
@@ -45,6 +48,7 @@ namespace MiniJam167.Enemy
 		public void Init()
 		{
 			_container.SetActive(true);
+			_corruptedContainer.SetActive(false);
 			_health = _maxHealth;
 			_collider.enabled = true;
 			Initialized?.Invoke();
@@ -53,6 +57,7 @@ namespace MiniJam167.Enemy
 		public void Hide()
 		{
 			_container.SetActive(false);
+			_corruptedContainer.SetActive(false);
 			_collider.enabled = false;
 			Hidden?.Invoke();
 		}
@@ -73,6 +78,8 @@ namespace MiniJam167.Enemy
 
 		public void Corrupt()
 		{
+			_container.SetActive(false);
+			_corruptedContainer.SetActive(true);
 			_collider.enabled = false;
 			_tween?.Kill();
 			Corrupted?.Invoke();
@@ -82,6 +89,15 @@ namespace MiniJam167.Enemy
 		{
 			_collider.enabled = false;
 			Died?.Invoke();
+		}
+
+		public bool Protect(IHitter hitter)
+		{
+			if (_isCorrupted || _health <= 0) return false;
+			
+			Protected?.Invoke();
+			OnHit(hitter);
+			return true;
 		}
 	}
 }

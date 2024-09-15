@@ -5,12 +5,14 @@ using UnityEngine;
 namespace MiniJam167.Enemy
 {
     [RequireComponent(typeof(EnemyPart))]
+    [RequireComponent(typeof(Animator))]
     public class EnemyPartVisual : MonoBehaviour
     {
         [Header("Components")]
         [SerializeField] private EnemyPart _part;
+        [SerializeField] private Animator _animator;
         [SerializeField] private VisualPart[] _featherVisuals;
-	[SerializeField] private VisualPart[] _boneVisuals;
+	    [SerializeField] private VisualPart[] _boneVisuals;
         
         [Header("Settings")]
         [SerializeField] private Gradient _normalGradient;
@@ -23,9 +25,12 @@ namespace MiniJam167.Enemy
         [Space]
         [SerializeField] private ColorMemo _corruptedColor;
 
+        private EnemyVisual _body;
+
         private void Reset()
         {
             _part = GetComponent<EnemyPart>();
+            _animator = GetComponent<Animator>();
         }
 
         private void Awake()
@@ -36,6 +41,7 @@ namespace MiniJam167.Enemy
             _part.Disabled += OnDisabled;
             _part.Hit += OnHit;
             _part.Corrupted += OnCorrupted;
+            _part.Protected += OnProtected;
         }
 
         private void OnDestroy()
@@ -46,6 +52,14 @@ namespace MiniJam167.Enemy
             _part.Disabled -= OnDisabled;
             _part.Hit -= OnHit;
             _part.Corrupted -= OnCorrupted;
+            _part.Protected -= OnProtected;
+            _body.ColorSet -= SetBoneColor;
+        }
+
+        public void Init(EnemyVisual body)
+        {
+            _body = body;
+            _body.ColorSet += SetBoneColor;
         }
 
         private void OnInitialized()
@@ -94,6 +108,17 @@ namespace MiniJam167.Enemy
         {
             foreach (VisualPart feather in _featherVisuals)
                 feather.Renderer.color = color;
+        }
+        
+        private void SetBoneColor(Color color)
+        {
+            foreach (VisualPart bone in _boneVisuals)
+                bone.Renderer.color = color;
+        }
+
+        private void OnProtected()
+        {
+            _animator.Play("Protect");
         }
     }
 }

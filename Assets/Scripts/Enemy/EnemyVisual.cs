@@ -1,6 +1,7 @@
 using DG.Tweening;
 using MiniJam167.Utility;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace MiniJam167.Enemy
 {
@@ -14,6 +15,7 @@ namespace MiniJam167.Enemy
         
         [Header("Normal")]
         [SerializeField] private SpriteRenderer _normalFaceRenderer;
+        [SerializeField] private GameObject _normalFace;
         [SerializeField] private Sprite _normalSprite;
         [SerializeField] private Sprite _normalFaceSpriteDefault;
         [SerializeField] private Sprite _normalFaceSpriteDamage;
@@ -26,14 +28,18 @@ namespace MiniJam167.Enemy
         [SerializeField] private Gradient _corruptedGradient;
         [SerializeField] private Gradient _scleraGradient;
         
-        [Header("Body Parts")]
-        [SerializeField] private VisualPart[] _boneVisuals;
-        
         [Header("Damage")]
         [SerializeField] private ColorMemo _flashColor;
         [SerializeField] private FloatMemo _flashDuration;
+        
+        [Header("Parts")]
+        [SerializeField] private EnemyPartVisual[] _parts;
 
         private bool _corrupted;
+        
+        public delegate void ColorSetEvent(Color color);
+        
+        public event ColorSetEvent ColorSet;
         
         private void Reset()
         {
@@ -46,6 +52,8 @@ namespace MiniJam167.Enemy
             _body.HealthChanged += OnHealthChanged;
             _body.PhaseChanged += OnPhaseChanged;
             _body.Died += OnDied;
+            foreach (EnemyPartVisual part in _parts)
+                part.Init(this);
         }
 
         private void OnDestroy()
@@ -72,7 +80,7 @@ namespace MiniJam167.Enemy
                 color = _normalGradient.Evaluate(health / maxHealth);
             }
             SetColor(_flashColor.Value);
-            DOVirtual.Color(_flashColor.Value, color, _flashDuration.Value, SetColor).Play();
+            DOVirtual.Color(_flashColor.Value, color, _flashDuration.Value, SetColorWithoutNotify).Play();
         }
 
         private void OnPhaseChanged(int phase, int maxPhase)
@@ -92,24 +100,17 @@ namespace MiniJam167.Enemy
         private void SetCorrupted()
         {
             _renderer.sprite = _corruptedSprite;
+            _normalFace.SetActive(false);
             _corruptedFace.SetActive(true);
-            foreach (VisualPart bone in _boneVisuals)
-                bone.Renderer.sprite = bone.CorruptedSprite;
             SetColor(_corruptedGradient.Evaluate(1));
         }
         
         private void SetNormal()
         {
             _renderer.sprite = _normalSprite;
+            _normalFace.SetActive(true);
             _corruptedFace.SetActive(false);
-            foreach (VisualPart bone in _boneVisuals)
-                bone.Renderer.sprite = bone.NormalSprite;
             SetColor(_normalGradient.Evaluate(1));
-        }
-
-        private void SetPhaseComponents(bool corrupted)
-        {
-            _corruptedFace.SetActive(corrupted);
         }
 
         private void OnDied()
@@ -120,8 +121,12 @@ namespace MiniJam167.Enemy
         private void SetColor(Color color)
         {
             _renderer.color = color;
-            foreach (VisualPart bone in _boneVisuals)
-                bone.Renderer.color = color;
+            ColorSet?.Invoke(color);
+        }
+
+        private void SetColorWithoutNotify(Color color)
+        {
+            _renderer.color = color;
         }
     }
 }
