@@ -234,9 +234,6 @@
 		<property name="length">
 			<value>2</value>
 		</property>
-		<relationship name="parameters">
-			<destination>{76eae673-403d-43f2-85cb-ec4eedd844ea}</destination>
-		</relationship>
 		<relationship name="event">
 			<destination>{76a23d1a-846c-4d96-9d6a-d07681f8108f}</destination>
 		</relationship>
@@ -348,11 +345,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1f1729af-b96e-4109-893a-9fc5f5535f69}" />
-	<object class="ParameterProperty" id="{76eae673-403d-43f2-85cb-ec4eedd844ea}">
-		<relationship name="parameter">
-			<destination>{0d648ba4-b042-45ae-971f-9b794096ae5e}</destination>
-		</relationship>
-	</object>
 	<object class="MixerBusEffectChain" id="{73986347-f020-47bc-9b73-27c3b1090b3c}">
 		<relationship name="effects">
 			<destination>{e9430c51-abf6-4b7a-b3d7-056e0fa0bd06}</destination>

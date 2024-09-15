@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.00.00">
-	<object class="ParameterPreset" id="{9799c405-2e2b-4d22-9d6a-41efad8044d7}">
+	<object class="ParameterPreset" id="{9794e2da-f0f9-48a4-a3aa-9de450d4789b}">
 		<property name="name">
-			<value>Boss gets hit</value>
+			<value>Tracker Release</value>
 		</property>
 		<relationship name="folder">
 			<destination>{2acce1de-7902-4e60-88a8-e6c166dd6bfc}</destination>
 		</relationship>
 		<relationship name="parameter">
-			<destination>{2064a3e0-7336-4a9e-892a-074c58a5bd20}</destination>
+			<destination>{5d1d1a2a-7afd-4bb7-8861-a97d64c51f9f}</destination>
 		</relationship>
 	</object>
-	<object class="GameParameter" id="{2064a3e0-7336-4a9e-892a-074c58a5bd20}">
-		<property name="parameterType">
-			<value>1</value>
-		</property>
-		<property name="maximum">
-			<value>2</value>
-		</property>
+	<object class="GameParameter" id="{5d1d1a2a-7afd-4bb7-8861-a97d64c51f9f}">
 		<property name="initialValue">
 			<value>0</value>
 		</property>
