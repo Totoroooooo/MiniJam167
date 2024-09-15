@@ -7,9 +7,9 @@ namespace MiniJam167.Enemy
 {
 	public class EnemyPart : MonoBehaviour, IHittable
 	{
-		[SerializeField] private Collider2D _collider;
 		[SerializeField] private GameObject _container;
 		[SerializeField] private GameObject _corruptedContainer;
+		[SerializeField] private HitCollision[] _hitCollisions;
 		[Space]
 		[SerializeField] private float _maxHealth = 100f;
 		[SerializeField] private float _shield;
@@ -40,6 +40,8 @@ namespace MiniJam167.Enemy
 		{
 			_container.SetActive(false);
 			_corruptedContainer.SetActive(false);
+			foreach (HitCollision collision in _hitCollisions)
+				collision.SetHittableParent(this);
 		}
 
 		public void OnHit(IHitter hitter)
@@ -56,28 +58,34 @@ namespace MiniJam167.Enemy
 			_container.SetActive(true);
 			_corruptedContainer.SetActive(false);
 			_health = _maxHealth;
-			_collider.enabled = true;
+			EnableCollision(true);
 			Initialized?.Invoke();
+		}
+
+		private void EnableCollision(bool enable)
+		{
+			foreach (HitCollision collision in _hitCollisions)
+				collision.enabled = enable;
 		}
 
 		public void Hide()
 		{
 			_container.SetActive(false);
 			_corruptedContainer.SetActive(false);
-			_collider.enabled = false;
+			EnableCollision(false);
 			Hidden?.Invoke();
 		}
 
 		public void Enable()
 		{
 			_health = _maxHealth;
-			_collider.enabled = true;
+			EnableCollision(true);
 			Enabled?.Invoke();
 		}
 
 		private void Disable()
 		{
-			_collider.enabled = false;
+			EnableCollision(false);
 			Disabled?.Invoke(_disableDuration);
 			_tween = DOVirtual.DelayedCall(_disableDuration, Enable).Play();
 		}
@@ -86,14 +94,14 @@ namespace MiniJam167.Enemy
 		{
 			_container.SetActive(false);
 			_corruptedContainer.SetActive(true);
-			_collider.enabled = false;
+			EnableCollision(false);
 			_tween?.Kill();
 			Corrupted?.Invoke();
 		}
 
 		public void Die()
 		{
-			_collider.enabled = false;
+			EnableCollision(false);
 			Died?.Invoke();
 		}
 
