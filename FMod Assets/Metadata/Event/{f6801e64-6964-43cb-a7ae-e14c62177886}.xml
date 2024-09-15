@@ -60,9 +60,6 @@
 	<object class="EventAutomatableProperties" id="{591e8378-ad5f-4710-b783-8fd67ff0a65a}" />
 	<object class="MarkerTrack" id="{c5f26030-fccd-4781-ab56-326db21ea11a}" />
 	<object class="GroupTrack" id="{386f6019-ea52-4d61-b754-4ff8fb6c4eff}">
-		<relationship name="automationTracks">
-			<destination>{92c64e65-1692-465c-8afd-955811d57359}</destination>
-		</relationship>
 		<relationship name="modules">
 			<destination>{764da6e7-bca3-45ba-9444-fdf578f9ca7f}</destination>
 		</relationship>
@@ -101,11 +98,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7e7be6fe-4c2f-47f3-b3d1-5b016ab32877}" />
-	<object class="AutomationTrack" id="{92c64e65-1692-465c-8afd-955811d57359}">
-		<relationship name="automator">
-			<destination>{867c0fe4-a63e-46ce-80de-e81897e2a778}</destination>
-		</relationship>
-	</object>
 	<object class="MultiSound" id="{764da6e7-bca3-45ba-9444-fdf578f9ca7f}">
 		<property name="length">
 			<value>0.12</value>
@@ -116,7 +108,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{672c2d94-854c-4881-9c6a-4470957a9c11}">
 		<property name="name">
-			<value>Audio 1</value>
+			<value>Vanilla pew pew</value>
 		</property>
 		<relationship name="automators">
 			<destination>{867c0fe4-a63e-46ce-80de-e81897e2a778}</destination>
@@ -222,7 +214,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>3.81469727e-06</value>
+			<value>-5.99999619</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{f5b144ba-3aa9-4d41-8c61-ab242429fc5e}">
@@ -230,7 +222,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>6</value>
+			<value>0</value>
 		</property>
 	</object>
 </objects>
