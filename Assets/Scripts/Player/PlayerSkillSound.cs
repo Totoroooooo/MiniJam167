@@ -1,21 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace MiniJam167
+namespace MiniJam167.Sound
 {
     public class PlayerSkillSound : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        [SerializeField] FMODUnity.StudioEventEmitter _eventEmitter;
+        [SerializeField] PlayerSkillDefault _playerSkill;
+
+        private void Start()
         {
-        
+            _playerSkill.Launched += PlaySound;
         }
 
-        // Update is called once per frame
-        void Update()
+        private void OnDestroy()
         {
-        
+            _playerSkill.Launched -= PlaySound;
+        }
+
+        public void PlaySound()
+        {
+            _eventEmitter.Play();
         }
     }
 }

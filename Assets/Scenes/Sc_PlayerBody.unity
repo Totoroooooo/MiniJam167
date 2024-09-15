@@ -150,6 +150,30 @@ PrefabInstance:
       propertyPath: m_SpriteSortPoint
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1146456997581898026, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
+      propertyPath: _spawns.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146456997581898026, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
+      propertyPath: _spawns.Array.data[1].Points.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146456997581898026, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
+      propertyPath: _spawns.Array.data[0].Points.Array.data[0]
+      value: 
+      objectReference: {fileID: 1277094413}
+    - target: {fileID: 1146456997581898026, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
+      propertyPath: _spawns.Array.data[1].RotationRange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146456997581898026, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
+      propertyPath: _spawns.Array.data[1].RotationRange.Array.data[0].x
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146456997581898026, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
+      propertyPath: _spawns.Array.data[1].RotationRange.Array.data[0].y
+      value: 225
+      objectReference: {fileID: 0}
     - target: {fileID: 2212431418978003656, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
       propertyPath: m_Name
       value: Pf_Enemy Body
@@ -330,6 +354,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1fb911bf4212a843b5be77ad170ffb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1277094413 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6406575235320401087, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
+  m_PrefabInstance: {fileID: 899869439}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1397219881
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +563,8 @@ GameObject:
   - component: {fileID: 1900973957}
   - component: {fileID: 1900973956}
   - component: {fileID: 1900973955}
+  - component: {fileID: 1900973959}
+  - component: {fileID: 1900973960}
   m_Layer: 0
   m_Name: ProjectileSpawner
   m_TagString: Untagged
@@ -584,6 +615,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1900973959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900973954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2059167609
+      Data2: 1233225348
+      Data3: 1166663317
+      Data4: 703892236
+    Path: event:/Music/New Event
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1900973960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900973954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75193cb43f11fb44eb8cd2d82fcfe0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundCaller:
+    CallbackRadio: {fileID: 11400000, guid: 3e27c0a318680b9438199deb1d85cf04, type: 2}
+  _emitter: {fileID: 1900973959}
+  PlayerProjectileSpawner: {fileID: 1900973956}
 --- !u!1 &1917893980
 GameObject:
   m_ObjectHideFlags: 0
