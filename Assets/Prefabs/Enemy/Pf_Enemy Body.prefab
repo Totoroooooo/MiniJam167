@@ -1087,9 +1087,17 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
+      propertyPath: _fireRate
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _projectilePool
       value: 
-      objectReference: {fileID: 5070447635391167762}
+      objectReference: {fileID: 3070456963806798496}
+    - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
+      propertyPath: _corruptFireRate
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _spawns.Array.data[0].Points.Array.data[0]
       value: 
@@ -1747,9 +1755,17 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
+      propertyPath: _fireRate
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _projectilePool
       value: 
-      objectReference: {fileID: 5070447635391167762}
+      objectReference: {fileID: 3070456963806798496}
+    - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
+      propertyPath: _corruptFireRate
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _spawns.Array.data[0].Points.Array.data[0]
       value: 

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.2745098, g: 0.77254903, b: 0.3422203, a: 0.5529412}
   m_FlipX: 0
@@ -128,10 +128,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 6989870136315561471}
   _skill: {fileID: 11400000, guid: 4537b6bceff36f84785f7fab7f29315c, type: 2}
-  _lifeTime: 30
+  _lifeTime: 10
   _moveSpeed: 2
-  _rotationSpeedRange: {x: 20, y: 40}
+  _rotationSpeedRange: {x: 20, y: 30}
   _visualRotationSpeedRange: {x: 10, y: 20}
+  _scale: 4
+  _scaleDuration: 1
 --- !u!60 &5005669999459708822
 PolygonCollider2D:
   m_ObjectHideFlags: 0
