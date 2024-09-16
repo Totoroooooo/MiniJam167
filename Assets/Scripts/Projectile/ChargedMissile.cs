@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using MiniJam167.HitSystem;
@@ -65,7 +64,6 @@ namespace MiniJam167.Projectile
             
             async UniTaskVoid ChargeMissile()
             {
-                Debug.Log("Charging");
                 _isFollowing = true;
                 
                 _animator.SetInteger(ANIMATION_PARAMETER, 0);
