@@ -131,10 +131,10 @@ MonoBehaviour:
   _rigidbody: {fileID: 6989870136315561471}
   _skill: {fileID: 11400000, guid: 4537b6bceff36f84785f7fab7f29315c, type: 2}
   _lifeTime: 10
-  _moveSpeed: 2
+  _moveSpeed: 1.5
   _rotationSpeedRange: {x: 20, y: 30}
   _visualRotationSpeedRange: {x: 10, y: 20}
-  _scale: 1
+  _scale: 1.5
   _scaleDuration: 1
 --- !u!66 &5411235409035511114
 CompositeCollider2D:

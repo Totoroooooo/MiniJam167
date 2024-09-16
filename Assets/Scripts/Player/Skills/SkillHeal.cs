@@ -1,5 +1,6 @@
 using MiniJam167.Utility;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace MiniJam167.Player.Skills
 {
@@ -7,7 +8,7 @@ namespace MiniJam167.Player.Skills
     public class SkillHeal : PlayerSkillMemo
     {
         [SerializeField] private PlayerRadio _playerRadio;
-        [SerializeField] private float _bulletPerSecond = 2f;
+        [FormerlySerializedAs("_bulletPerSecond")] [SerializeField] private float _fireRate = 2f;
         [SerializeField] private float _healValue = 5f;
 
         private float _timer;
@@ -15,7 +16,7 @@ namespace MiniJam167.Player.Skills
         
         protected override void OnSubcribe(Vector2 position, Quaternion rotation)
         {
-            _delay = 1f / _bulletPerSecond;
+            _delay = 1f / _fireRate;
             _timer = 0;
         }
 

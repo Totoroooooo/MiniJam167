@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Mm_SkillHeal
   m_EditorClassIdentifier: 
   _playerRadio: {fileID: 11400000, guid: 5174c77d7ec9d09429aaed46c5c24b81, type: 2}
-  _bulletPerSecond: 2
-  _healValue: 5
+  _fireRate: 2
+  _healValue: 10
