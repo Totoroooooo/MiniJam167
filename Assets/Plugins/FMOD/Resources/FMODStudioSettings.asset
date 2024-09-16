@@ -307,7 +307,7 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: FMod Assets/Test_on_croise_les_doigts.fspro
+  sourceProjectPath: FMod Assets/GameJamCyberFMod.fspro
   sourceBankPath: FMod Assets/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
@@ -316,8 +316,8 @@ MonoBehaviour:
   BankLoadType: 0
   AutomaticSampleLoading: 0
   EncryptionKey: 
-  ImportType: 1
-  TargetAssetPath: Build\Desktop
+  ImportType: 0
+  TargetAssetPath: 
   TargetBankFolder: 
   EventLinkage: 0
   LoggingLevel: 2
