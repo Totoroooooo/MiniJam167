@@ -354,6 +354,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 349326371491437390, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1040701516849029238, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
       propertyPath: m_SpriteSortPoint
       value: 1
@@ -466,6 +470,10 @@ PrefabInstance:
       propertyPath: _spawns.Array.data[1].Points.Array.data[2]
       value: 
       objectReference: {fileID: 832617869}
+    - target: {fileID: 3473132531540982895, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3871760186536829752, guid: 30ccd97d6784fb14bbc58619808db476, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.027

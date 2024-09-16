@@ -377,8 +377,8 @@ MonoBehaviour:
   _normalFaceSpriteDamage: {fileID: 21300000, guid: 202aaa17ef12cfb4d95487673d64fd17, type: 3}
   _normalGradient:
     serializedVersion: 2
-    key0: {r: 0.5283019, g: 0.09220363, b: 0.09220363, a: 1}
-    key1: {r: 0.8867924, g: 0.88511604, b: 0.6483624, a: 1}
+    key0: {r: 0.7264151, g: 0.13072851, b: 0.11307406, a: 1}
+    key1: {r: 1, g: 0.6666667, b: 0.8666667, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -797,7 +797,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: d1c5d19669c9d4847a966ab3138459b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1057,7 +1057,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 8f953e1d232fcf242a7ce26ca878c940, type: 3}
   m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
   m_FlipX: 0
