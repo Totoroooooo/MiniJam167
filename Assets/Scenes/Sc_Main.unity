@@ -262,7 +262,6 @@ MonoBehaviour:
   UnloadEvent: 0
   Banks:
   - 
-  - 
   CollisionTag: 
   PreloadSamples: 0
 --- !u!114 &2131424917

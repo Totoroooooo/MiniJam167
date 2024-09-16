@@ -38,7 +38,7 @@
 			<destination>{5daa8f98-4fa9-484e-850b-891e312a9f31}</destination>
 		</relationship>
 		<relationship name="banks">
-			<destination>{858a2655-882c-47b9-a38b-dca1e0509e2d}</destination>
+			<destination>{e6d6b8cf-614c-44b8-a656-afc786d1d601}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{0f99a2fb-2f7f-4178-93ba-f9cac74811d7}">
@@ -370,7 +370,6 @@
 		<property name="length">
 			<value>11.520000000000003</value>
 		</property>
-		<property name="name" />
 		<relationship name="timeline">
 			<destination>{d92e4f37-a051-4f6b-b9c4-20c2c345aa89}</destination>
 		</relationship>
