@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using FMODUnity;
 using MiniJam167.HitSystem;
+using MiniJam167.Utility;
 using UnityEngine;
 
 namespace MiniJam167.Enemy
@@ -18,6 +18,7 @@ namespace MiniJam167.Enemy
 		[SerializeField] private Collider2D _normalCollider;
 		[SerializeField] private Collider2D _corruptedCollider;
 		[SerializeField] private EnemyPart[] _protectionParts;
+		[SerializeField] private TransformRadio _enemyRadio;
 
 		[Header("Phases")]
 		[SerializeField] private Phase[] _phases;
@@ -45,8 +46,18 @@ namespace MiniJam167.Enemy
 		public event PhaseEvent PhaseChanged;
 		public event Action Died;
 		public event Action Hitted;
-		
-        public void Init()
+
+		private void Awake()
+		{
+			_enemyRadio.Value = transform;
+		}
+
+		private void OnDestroy()
+		{
+			_enemyRadio.Value = null;
+		}
+
+		public void Init()
         {
 	        _normalCollider.enabled = true;
 	        _corruptedCollider.enabled = false;

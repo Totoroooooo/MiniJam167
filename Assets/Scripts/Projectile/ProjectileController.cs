@@ -10,9 +10,9 @@ namespace MiniJam167.Projectile
 
         public void Spawn(Vector2 position, Quaternion rotation, Pool<ProjectileController> pool)
         {
-            SoundCaller?.Callback?.Invoke();
             _pool = pool;
             OnSpawn(position, rotation);
+            SoundCaller?.Callback?.Invoke();
         }
         
         protected abstract void OnSpawn(Vector2 position, Quaternion rotation);
