@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6059494096307170009}
   - component: {fileID: 8717099493673543264}
-  - component: {fileID: 141466701060822066}
   - component: {fileID: 2509563566510564824}
   - component: {fileID: 8762351735293533488}
+  - component: {fileID: 9087181377333369004}
   m_Layer: 7
   m_Name: Pf_Player_DefaultProjectile
   m_TagString: Untagged
@@ -87,24 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &141466701060822066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651679100995585423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e67b5f58407b1442b0a7a6495cf21af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SoundCaller: {fileID: 11400000, guid: 3e27c0a318680b9438199deb1d85cf04, type: 2}
-  _damage: 2
-  _lethality: 0
-  _rb: {fileID: 2509563566510564824}
-  _speed: 10
-  _life: 3
 --- !u!50 &2509563566510564824
 Rigidbody2D:
   serializedVersion: 4
@@ -167,3 +149,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.7
+--- !u!114 &9087181377333369004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651679100995585423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea780c8602f64267adc5fc87f9922253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundCaller: {fileID: 0}
+  _damage: 2
+  _lethality: 0
+  _rb: {fileID: 2509563566510564824}
+  _speed: 10
+  _life: 3
+  _rotationSpeed: 50
+  _target: {fileID: 11400000, guid: 1aa0d555ab3d788488d91b6bc5e52407, type: 2}
