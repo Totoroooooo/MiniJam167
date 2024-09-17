@@ -30,9 +30,9 @@ Transform:
   m_GameObject: {fileID: 7185839492426810688}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.48, y: -3.11, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -127,6 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 522c95bddda9f644f8a8a6202f366da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _setScaleOnSpawn: 1
+  _lossyScale: 0.5
   SoundCaller: {fileID: 0}
   _rigidbody: {fileID: 6989870136315561471}
   _skill: {fileID: 11400000, guid: 4537b6bceff36f84785f7fab7f29315c, type: 2}
@@ -134,7 +136,6 @@ MonoBehaviour:
   _moveSpeed: 1.5
   _rotationSpeedRange: {x: 20, y: 30}
   _visualRotationSpeedRange: {x: 10, y: 20}
-  _scale: 1.5
   _scaleDuration: 1
 --- !u!66 &5411235409035511114
 CompositeCollider2D:

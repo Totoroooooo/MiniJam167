@@ -344,15 +344,15 @@ MonoBehaviour:
     Parts:
     - {fileID: 1236141692384532158}
     - {fileID: 4022694575424162798}
-  - MaxHealth: 15
+  - MaxHealth: 10
     Parts:
     - {fileID: 1823477937405678484}
     - {fileID: 8614414711701947278}
-  - MaxHealth: 15
+  - MaxHealth: 10
     Parts:
     - {fileID: 6381134124267431904}
     - {fileID: 1757138441303142455}
-  - MaxHealth: 50
+  - MaxHealth: 30
     Parts: []
   _shield: 0
   _damageMultiplier: 1
@@ -1503,7 +1503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _fireRate
-      value: 0.05
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _projectilePool
@@ -1511,7 +1511,7 @@ PrefabInstance:
       objectReference: {fileID: 3070456963806798496}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _corruptFireRate
-      value: 0.05
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _spawns.Array.data[0].Points.Array.data[0]
@@ -1690,9 +1690,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
+      propertyPath: _fireRate
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _projectilePool
       value: 
-      objectReference: {fileID: 5070447635391167762}
+      objectReference: {fileID: 8518995019938169315}
+    - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
+      propertyPath: _corruptFireRate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _spawns.Array.data[0].Points.Array.data[0]
       value: 
@@ -1719,27 +1727,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4992471520915170872, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _normalGradient.key0.b
-      value: 0.16078432
+      value: 0.3137255
       objectReference: {fileID: 0}
     - target: {fileID: 4992471520915170872, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _normalGradient.key0.g
-      value: 0.12482201
+      value: 0.8627451
       objectReference: {fileID: 0}
     - target: {fileID: 4992471520915170872, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _normalGradient.key0.r
-      value: 0.8039216
+      value: 0.9137255
       objectReference: {fileID: 0}
     - target: {fileID: 4992471520915170872, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _normalGradient.key1.b
-      value: 0.003921579
+      value: 0.3137255
       objectReference: {fileID: 0}
     - target: {fileID: 4992471520915170872, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _normalGradient.key1.g
-      value: 0.08581701
+      value: 0.8627451
       objectReference: {fileID: 0}
     - target: {fileID: 4992471520915170872, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _normalGradient.key1.r
-      value: 0.7058824
+      value: 0.9137255
       objectReference: {fileID: 0}
     - target: {fileID: 5736621530443520352, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: m_Layer
@@ -1792,7 +1800,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8696063559200599646, guid: 189641f12b2b2314996852955dd80090, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1692199190891656275}
   m_SourcePrefab: {fileID: 100100000, guid: 189641f12b2b2314996852955dd80090, type: 3}
 --- !u!4 &1072572034096892470 stripped
 Transform:
@@ -1804,18 +1815,52 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2516047031122847149, guid: 189641f12b2b2314996852955dd80090, type: 3}
   m_PrefabInstance: {fileID: 4297701731532486201}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4830707978175633511}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3167c53ace84df744a928c4b1614ac2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4830707978175633511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8696063559200599646, guid: 189641f12b2b2314996852955dd80090, type: 3}
+  m_PrefabInstance: {fileID: 4297701731532486201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1692199190891656275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4830707978175633511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917a7e766e254813beaf771065e85128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectilePool: {fileID: 805259135677994870}
+  _spawns:
+  - Points:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    RotationRange:
+    - {x: 225, y: 360}
+  - Points:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    RotationRange:
+    - {x: 0, y: 145}
+  _fireRate: 0.5
+  _corruptFireRate: 0.5
+  _part: {fileID: 1823477937405678484}
 --- !u!114 &9145775729260367873 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4992471520915170872, guid: 189641f12b2b2314996852955dd80090, type: 3}
   m_PrefabInstance: {fileID: 4297701731532486201}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4830707978175633511}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb8982685f5b43009d2042592801fbd9, type: 3}
@@ -2111,15 +2156,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _fireRate
-      value: 0.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _projectilePool
       value: 
-      objectReference: {fileID: 8518995019938169315}
+      objectReference: {fileID: 5070447635391167762}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _corruptFireRate
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _spawns.Array.data[0].Points.Array.data[0]
@@ -2213,7 +2258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917a7e766e254813beaf771065e85128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectilePool: {fileID: 805259135677994870}
+  _projectilePool: {fileID: 4554223037772909417}
   _spawns:
   - Points:
     - {fileID: 0}
@@ -2268,27 +2313,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2130099622014328234, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _normalGradient.key0.b
-      value: 0.8509804
+      value: 0.3137255
       objectReference: {fileID: 0}
     - target: {fileID: 2130099622014328234, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _normalGradient.key0.g
-      value: 0.8784314
+      value: 0.8627451
       objectReference: {fileID: 0}
     - target: {fileID: 2130099622014328234, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _normalGradient.key0.r
-      value: 0.2509804
+      value: 0.9137255
       objectReference: {fileID: 0}
     - target: {fileID: 2130099622014328234, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _normalGradient.key1.b
-      value: 0.8526376
+      value: 0.3137255
       objectReference: {fileID: 0}
     - target: {fileID: 2130099622014328234, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _normalGradient.key1.g
-      value: 0.8773585
+      value: 0.8627451
       objectReference: {fileID: 0}
     - target: {fileID: 2130099622014328234, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _normalGradient.key1.r
-      value: 0.25244746
+      value: 0.9137255
       objectReference: {fileID: 0}
     - target: {fileID: 2335661266735093196, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: m_Name
@@ -2332,15 +2377,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _fireRate
-      value: 0.05
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _projectilePool
       value: 
-      objectReference: {fileID: 3070456963806798496}
+      objectReference: {fileID: 8518995019938169315}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _corruptFireRate
-      value: 0.05
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _spawns.Array.data[0].Points.Array.data[0]
@@ -2393,7 +2438,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2335661266735093196, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8286049837518735905}
   m_SourcePrefab: {fileID: 100100000, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
 --- !u!4 &1138950055676373397 stripped
 Transform:
@@ -2405,18 +2453,52 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8803898756194655807, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
   m_PrefabInstance: {fileID: 7083924016417926664}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4766718052388617156}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3167c53ace84df744a928c4b1614ac2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4766718052388617156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2335661266735093196, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
+  m_PrefabInstance: {fileID: 7083924016417926664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8286049837518735905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4766718052388617156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917a7e766e254813beaf771065e85128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectilePool: {fileID: 805259135677994870}
+  _spawns:
+  - Points:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    RotationRange:
+    - {x: 225, y: 360}
+  - Points:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    RotationRange:
+    - {x: 0, y: 145}
+  _fireRate: 0.5
+  _corruptFireRate: 0.5
+  _part: {fileID: 1757138441303142455}
 --- !u!114 &9205503935067550626 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2130099622014328234, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
   m_PrefabInstance: {fileID: 7083924016417926664}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4766718052388617156}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb8982685f5b43009d2042592801fbd9, type: 3}

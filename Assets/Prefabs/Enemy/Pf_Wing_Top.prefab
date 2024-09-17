@@ -761,7 +761,7 @@ MonoBehaviour:
   _maxHealth: 10
   _shield: 1
   _damageMultiplier: 1
-  _disableDuration: 5
+  _disableDuration: 10
 --- !u!114 &2130099622014328234
 MonoBehaviour:
   m_ObjectHideFlags: 0

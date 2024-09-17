@@ -24,7 +24,7 @@ namespace MiniJam167.Projectile
         public float Damage => _damage;
         public float Lethality => 0;
         
-        private List<IHittable> _hittables = new ();
+        private readonly HashSet<IHittable> _hittables = new ();
         private bool _isFollowing;
 
         private void Reset()
@@ -38,7 +38,7 @@ namespace MiniJam167.Projectile
                 return;
             
             Vector2 direction = _target.Value.transform.position - transform.position;
-            transform.right = -direction.normalized;
+            transform.right = direction.normalized;
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -46,15 +46,16 @@ namespace MiniJam167.Projectile
             if (!other.TryGetComponent(out IHittable hittable))
                 return;
             
-            _hittables.Add(hittable);
+            if (!_hittables.Contains(hittable))
+                _hittables.Add(hittable);
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
             if (!other.TryGetComponent(out IHittable hittable))
                 return;
-            
-            _hittables.Remove(hittable);
+            if (_hittables.Contains(hittable))
+                _hittables.Remove(hittable);
         }
         
         protected override void OnSpawn(Vector2 position, Quaternion rotation)
@@ -76,7 +77,7 @@ namespace MiniJam167.Projectile
                 
                 await UniTask.WaitForSeconds(_startUp);
                 foreach (IHittable hittable in _hittables)
-                    hittable.OnHit(this);
+                    hittable?.OnHit(this);
                 
                 await UniTask.WaitForSeconds(_laserDuration);
                 _animator.SetInteger(ANIMATION_PARAMETER, 3);

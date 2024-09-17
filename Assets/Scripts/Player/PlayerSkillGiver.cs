@@ -20,7 +20,6 @@ namespace MiniJam167.Player
         [SerializeField] private Vector2 _visualRotationSpeedRange;
         
         [Header("Scale")]
-        [SerializeField] private float _scale = 4f;
         [SerializeField] private float _scaleDuration = 1f;
 
         private float _rotationSpeed;
@@ -66,8 +65,9 @@ namespace MiniJam167.Player
             _rotationSpeed = Random.Range(_rotationSpeedRange.x, _rotationSpeedRange.y);
             _visualRotationSpeed = Random.Range(_visualRotationSpeedRange.x, _visualRotationSpeedRange.y);
             _lifeTween = DOVirtual.DelayedCall(_lifeTime, ReleaseAnim).Play();
+            Vector3 scale = GetLossyScale();
             transform.localScale = Vector3.zero;
-            transform.DOScale(_scale, _scaleDuration).SetEase(Ease.OutBounce).Play();
+            transform.DOScale(scale, _scaleDuration).SetEase(Ease.OutBounce).Play();
         }
 
         private void ReleaseAnim()

@@ -69,7 +69,7 @@ namespace MiniJam167.Enemy
         private void OnEnabled()
         {
             _delay = _fireRate == 0 ? 0 : 1f / _fireRate;
-            _timer = 0;
+            _timer = _delay;
         }
 
         private void OnDisabled(float duration)

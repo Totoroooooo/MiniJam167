@@ -5,6 +5,7 @@ namespace MiniJam167.Projectile
 {
     public abstract class Missile : ProjectileController, IHitter
     {
+        [Header("Damage")]
         [SerializeField] private float _damage;
         [SerializeField] private float _lethality;
         
