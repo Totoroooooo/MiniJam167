@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _setScaleOnSpawn: 1
-  _lossyScale: 1
+  _lossyScale: 0.75
   SoundCaller: {fileID: 0}
   _animator: {fileID: 4354301000833885653}
   _target: {fileID: 11400000, guid: 1ad4381f928a69843a97a2428d2104f1, type: 2}
@@ -143,8 +143,8 @@ MonoBehaviour:
   _introDuration: 2
   _chargeDuration: 1
   _startUp: 0.35
-  _laserDuration: 0.35
-  _recovery: 0.1
+  _laserDuration: 0.65
+  _recovery: 0.2
 --- !u!95 &4354301000833885653
 Animator:
   serializedVersion: 5

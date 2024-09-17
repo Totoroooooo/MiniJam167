@@ -106,7 +106,7 @@ MonoBehaviour:
   _lethality: 0
   _rb: {fileID: 2509563566510564824}
   _speed: 5
-  _life: 10
+  _life: 4
 --- !u!50 &2509563566510564824
 Rigidbody2D:
   serializedVersion: 4
