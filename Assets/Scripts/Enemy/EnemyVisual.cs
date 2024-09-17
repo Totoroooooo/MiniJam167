@@ -84,7 +84,8 @@ namespace MiniJam167.Enemy
             {
                 color = _normalGradient.Evaluate(health / maxHealth);
             }
-            SetColor(_flashColor.Value);
+            SetColorWithoutNotify(_flashColor.Value);
+            ColorSet?.Invoke(color);
             DOVirtual.Color(_flashColor.Value, color, _flashDuration.Value, SetColorWithoutNotify).Play();
         }
 

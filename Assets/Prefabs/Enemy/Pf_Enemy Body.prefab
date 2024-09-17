@@ -554,7 +554,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2212431418978003656}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eac2b986a3e04e6489e16ad394f7631f, type: 3}
   m_Name: 
@@ -568,7 +568,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2212431418978003656}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
@@ -576,17 +576,17 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -2059167609
-      Data2: 1233225348
-      Data3: 1166663317
-      Data4: 703892236
-    Path: event:/Music/New Event
+      Data1: 1990343962
+      Data2: 1301709932
+      Data3: 1993370269
+      Data4: -1894713215
+    Path: event:/Event/BossHit
   Event: 
   PlayEvent: 0
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
-  Preload: 0
+  Preload: 1
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0

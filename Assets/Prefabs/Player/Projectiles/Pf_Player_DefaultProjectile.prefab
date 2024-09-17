@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _setScaleOnSpawn: 1
   _lossyScale: 0.2
-  SoundCaller: {fileID: 0}
+  SoundCaller: {fileID: 11400000, guid: 3e27c0a318680b9438199deb1d85cf04, type: 2}
   _damage: 2
   _lethality: 0
   _rb: {fileID: 2509563566510564824}

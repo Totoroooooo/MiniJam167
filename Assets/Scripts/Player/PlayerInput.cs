@@ -21,15 +21,15 @@ namespace MiniJam167.Player
             direction.z = 0;
             PlayerMoved?.Invoke(direction);
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-                PlayerKeyDown?.Invoke(transform.position, transform.rotation);
-            else if (Input.GetKeyUp(KeyCode.Mouse0))
-                PlayerKeyUp?.Invoke(transform.position, transform.rotation);
-
-            if (Input.GetKey(KeyCode.Mouse0))
-            {
-                PlayerKeyPressed?.Invoke(transform.position, transform.rotation, Time.deltaTime);
-            }
+            // if (Input.GetKeyDown(KeyCode.Mouse0))
+            //     PlayerKeyDown?.Invoke(transform.position, transform.rotation);
+            // else if (Input.GetKeyUp(KeyCode.Mouse0))
+            //     PlayerKeyUp?.Invoke(transform.position, transform.rotation);
+            //
+            // if (Input.GetKey(KeyCode.Mouse0))
+            //     PlayerKeyPressed?.Invoke(transform.position, transform.rotation, Time.deltaTime);
+            
+            PlayerKeyPressed?.Invoke(transform.position, transform.rotation, Time.deltaTime);
         }
     }
 }

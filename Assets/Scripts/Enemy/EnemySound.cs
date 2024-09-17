@@ -4,8 +4,8 @@ namespace MiniJam167.Enemy
 {
     public class EnemySound : MonoBehaviour
     {
-        [SerializeField] FMODUnity.StudioEventEmitter _eventEmitter;
-        [SerializeField] EnemyBody _enemyBody;
+        [SerializeField] private FMODUnity.StudioEventEmitter _eventEmitter;
+        [SerializeField] private EnemyBody _enemyBody;
 
         private void Start()
         {
@@ -15,7 +15,7 @@ namespace MiniJam167.Enemy
 
         private void OnDestroy()
         {
-            _enemyBody.Hitted += PlaySound;
+            _enemyBody.Hitted -= PlaySound;
             _enemyBody.Died -= PlaySound;
         }
 

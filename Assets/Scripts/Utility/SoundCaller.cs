@@ -8,12 +8,10 @@ namespace MiniJam167.Utility
     public class SoundCaller
     {
         public ActionRadio CallbackRadio;
+        public StudioEventEmitter Emitter;
 
-        private StudioEventEmitter _emitter;
-
-        public void Init(StudioEventEmitter emitter)
+        public void Init()
         {
-            _emitter = emitter;
             CallbackRadio.Callback += CallSound;
         }
 
@@ -24,7 +22,7 @@ namespace MiniJam167.Utility
 
         private void CallSound()
         {
-            _emitter.Play();
+            Emitter.Play();
         }
     }
 }

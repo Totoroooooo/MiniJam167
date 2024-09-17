@@ -1,27 +1,21 @@
-using FMODUnity;
-using MiniJam167.Projectile;
-using MiniJam167.Utility;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace MiniJam167
+namespace MiniJam167.Utility
 {
     public class SoundManager : MonoBehaviour
     {
-        [SerializeField] private SoundCaller _soundCaller;
-        [SerializeField] private StudioEventEmitter _emitter;
-
-        public PlayerProjectileSpawner PlayerProjectileSpawner;
+        [SerializeField] private SoundCaller[] _soundCallers;
 
         private void Start()
         {
-            _soundCaller.Init(_emitter);
+            foreach (SoundCaller caller in _soundCallers)
+                caller.Init();
         }
 
-        private void Clear()
+        private void OnDestroy()
         {
-            _soundCaller.Clear();
+            foreach (SoundCaller soundInfo in _soundCallers)
+                soundInfo.Clear();
         }
     }
 }
