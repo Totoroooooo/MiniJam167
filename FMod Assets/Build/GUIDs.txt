@@ -1,0 +1,11 @@
+{e6d6b8cf-614c-44b8-a656-afc786d1d601} bank:/Master
+{671e0dd4-3508-4bf2-bf21-97d568d315f7} event:/Amb/Amb
+{31258eb0-d1e9-4f57-9711-eebdaf553965} event:/Attack/Heal
+{8169bbd0-e22a-47e7-93f3-e82e7a863892} event:/Attack/LaserBoss
+{07514eb3-e578-48d3-bdd6-cc2c5b6b50eb} event:/Attack/Tracker
+{f6801e64-6964-43cb-a7ae-e14c62177886} event:/Attack/Vanilla
+{76a23d1a-846c-4d96-9d6a-d07681f8108f} event:/Event/BossHit
+{0c3b8d31-804d-47c5-b7b6-e55dac46f2b1} event:/Event/CharaHit
+{ce71ee1f-199e-4c81-9aff-86567b404f41} event:/Event/ZoneEnter
+{0fab3888-bf57-4d8d-a2d7-e2d620232f6a} event:/Menu/Volume FX
+{dbb4b0c7-9da7-48a3-ac0c-35a005b6be1b} event:/Music/Music
