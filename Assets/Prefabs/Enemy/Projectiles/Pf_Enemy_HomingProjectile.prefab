@@ -164,7 +164,7 @@ MonoBehaviour:
   _setScaleOnSpawn: 1
   _lossyScale: 0.2
   SoundCaller: {fileID: 11400000, guid: fc0046218c9daa445b098bfeffa81786, type: 2}
-  _damage: 10
+  _damage: 20
   _lethality: 0
   _rb: {fileID: 2509563566510564824}
   _speed: 3

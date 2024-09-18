@@ -62,7 +62,7 @@ namespace MiniJam167.Enemy
                 Vector2 rotationRange = spawn.RotationRange.GetRandom();
                 float rotationDegree = Random.Range(rotationRange.x, rotationRange.y);
                 Quaternion rotation = Quaternion.Euler(0, 0, rotationDegree);
-                SpawnProjectile(point.transform.position, rotation);
+                SpawnProjectile(point.transform.position, rotation, point);
             }
         }
 

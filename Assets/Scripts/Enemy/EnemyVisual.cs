@@ -19,8 +19,25 @@ namespace MiniJam167.Enemy
         [SerializeField] private GameObject _normalFace;
         [SerializeField] private Sprite _normalSprite;
         [SerializeField] private Sprite _normalFaceSpriteDefault;
+        [SerializeField] private Sprite _normalFaceSpriteEye;
         [SerializeField] private Sprite _normalFaceSpriteDamage;
+        [SerializeField] private Sprite _normalFaceSpriteProtect;
+        [SerializeField] private Sprite _normalFaceSpriteHeal;
+        [SerializeField] private Sprite _normalFaceSpriteLaser;
+        [SerializeField] private Sprite _normalFaceSpriteEnd;
         [SerializeField] private Gradient _normalGradient;
+        [SerializeField] private float _protectFaceDuration = 1;
+        
+        [Header("Normal Movement")]
+        [SerializeField] private float _normalMovementValue = 1;
+        [SerializeField] private float _normalMovementDuration = 1;
+        [SerializeField] private AnimationCurve _normalMovementCurve;
+        
+        [Header("Hurt Movement")]
+        [SerializeField] private float _hurtMovementValue = 1;
+        [SerializeField] private float _hurtMovementDuration = 1;
+        [SerializeField] private int _hurtMovementLoops = 4;
+        [SerializeField] private AnimationCurve _hurtMovementCurve;
         
         [Header("Corrupted")]
         [SerializeField] private GameObject _corruptedFace;
@@ -38,6 +55,9 @@ namespace MiniJam167.Enemy
 
         private bool _corrupted;
         
+        private Tween _normalMovementTween;
+        private Tween _hurtTween;
+        
         public delegate void ColorSetEvent(Color color);
         
         public event ColorSetEvent ColorSet;
@@ -50,9 +70,13 @@ namespace MiniJam167.Enemy
 
         private void Awake()
         {
+            _body.Shielded += OnShielded;
             _body.HealthChanged += OnHealthChanged;
             _body.PhaseChanged += OnPhaseChanged;
             _body.Died += OnDied;
+
+            _normalMovementTween = SetNormalMovementTween();
+            _hurtTween = SetHurtTween().Pause();
         }
 
         private void Start()
@@ -63,16 +87,41 @@ namespace MiniJam167.Enemy
 
         private void OnDestroy()
         {
+            _body.Shielded -= OnShielded;
             _body.HealthChanged -= OnHealthChanged;
             _body.PhaseChanged -= OnPhaseChanged;
             _body.Died -= OnDied;
+        }
+
+        private Tween SetNormalMovementTween()
+        {
+            return transform.DOLocalMoveY(transform.position.y + _normalMovementValue, _normalMovementDuration)
+                .SetEase(_normalMovementCurve)
+                .SetLoops(-1, LoopType.Yoyo)
+                .Pause();
+        }
+        
+        private Tween SetHurtTween()
+        {
+            return transform.DOLocalMoveX(transform.position.x + _hurtMovementValue, _hurtMovementDuration)
+                .SetEase(_hurtMovementCurve)
+                .SetLoops(_hurtMovementLoops, LoopType.Yoyo)
+                .SetAutoKill(false)
+                .Pause();
+        }
+        
+        private void OnShielded()
+        {
+            _normalFaceRenderer.sprite = _normalFaceSpriteProtect;
+            DOVirtual.DelayedCall(_protectFaceDuration, () => _normalFaceRenderer.sprite = _normalFaceSpriteDefault).Play();
         }
 
         private void OnHealthChanged(float health, float maxHealth, float phaseHealth, float phaseMaxHealth, float damage)
         {
             if (health == 0)
                 return;
-
+            
+            _hurtTween.Restart();
             Color color;
             if (_corrupted)
             {
@@ -82,6 +131,10 @@ namespace MiniJam167.Enemy
             }
             else
             {
+                _normalMovementTween.Pause();
+                DOVirtual.DelayedCall(_flashDuration.Value, () => _normalMovementTween.Play());
+                _normalFaceRenderer.sprite = _normalFaceSpriteDamage;
+                DOVirtual.DelayedCall(_flashDuration.Value, () => _normalFaceRenderer.sprite = _normalFaceSpriteDefault).Play();
                 color = _normalGradient.Evaluate(health / maxHealth);
             }
             SetColorWithoutNotify(_flashColor.Value);
@@ -105,6 +158,7 @@ namespace MiniJam167.Enemy
         
         private void SetCorrupted()
         {
+            _normalMovementTween.Pause();
             _renderer.sprite = _corruptedSprite;
             _normalFace.SetActive(false);
             _corruptedFace.SetActive(true);
@@ -113,6 +167,7 @@ namespace MiniJam167.Enemy
         
         private void SetNormal()
         {
+            _normalMovementTween.Play();
             _renderer.sprite = _normalSprite;
             _normalFace.SetActive(true);
             _corruptedFace.SetActive(false);
