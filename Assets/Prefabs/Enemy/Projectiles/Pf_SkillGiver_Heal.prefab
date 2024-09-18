@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 5ad47c70dae523c439924a20181afd6a, type: 3}
-  m_Color: {r: 0.19032574, g: 0.8584906, b: 0.5398822, a: 0.5019608}
+  m_Color: {r: 0.19032574, g: 0.8584906, b: 0.5398822, a: 0.3372549}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -128,12 +128,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _setScaleOnSpawn: 1
-  _lossyScale: 0.5
+  _lossyScale: 0.2
   SoundCaller: {fileID: 0}
+  _topRightRadio: {fileID: 11400000, guid: 5e94df67952ce6141abc086e0411a6b2, type: 2}
+  _bottomLeftRadio: {fileID: 11400000, guid: 29cfe65f0547da2409adc2c30bb105e4, type: 2}
   _rigidbody: {fileID: 6989870136315561471}
   _skill: {fileID: 11400000, guid: 4537b6bceff36f84785f7fab7f29315c, type: 2}
   _lifeTime: 10
-  _moveSpeed: 1.5
+  _moveSpeed: 0.75
   _rotationSpeedRange: {x: 20, y: 30}
   _visualRotationSpeedRange: {x: 10, y: 20}
   _scaleDuration: 1

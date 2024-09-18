@@ -12,12 +12,12 @@ namespace MiniJam167.Utility
 
         public void Init()
         {
-            CallbackRadio.Callback += CallSound;
+            CallbackRadio.Value += CallSound;
         }
 
         public void Clear()
         {
-            CallbackRadio.Callback -= CallSound;
+            CallbackRadio.Value -= CallSound;
         }
 
         private void CallSound()

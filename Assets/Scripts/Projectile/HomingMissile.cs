@@ -1,11 +1,10 @@
 using DG.Tweening;
-using MiniJam167.HitSystem;
 using MiniJam167.Utility;
 using UnityEngine;
 
 namespace MiniJam167.Projectile
 {
-    public class HomingMissile : DefaultMissile, IHittable
+    public class HomingMissile : DefaultMissile
     {
         [Header("Homing")]
         [Range(0, 1)]
@@ -13,18 +12,9 @@ namespace MiniJam167.Projectile
         [SerializeField] private float _precisionDuration = 5f;
         [SerializeField] private float _imprecisionDuration = 3f;
         [SerializeField] private TransformRadio _target;
-
-
-        public float Shield => 0;
-        public float DamageMultiplier => 1;
         
         private float _currentRotationSpeed;
         private Tween _homingDecaySequence;
-        
-        public void OnHit(IHitter hitter)
-        {
-            Release();
-        }
 
         protected override void OnSpawn(Vector2 position, Quaternion rotation)
         {

@@ -18,15 +18,15 @@ namespace MiniJam167.Projectile
             if (_setScaleOnSpawn)
                 transform.localScale = GetLossyScale();
             OnSpawn(position, rotation);
-            SoundCaller?.Callback?.Invoke();
+            SoundCaller?.Value?.Invoke();
         }
         
         protected abstract void OnSpawn(Vector2 position, Quaternion rotation);
 
         protected void Release()
         {
-            _pool.Release(this);
             OnRelease();
+            _pool.Release(this);
         }
         
         protected virtual void OnRelease() { }
