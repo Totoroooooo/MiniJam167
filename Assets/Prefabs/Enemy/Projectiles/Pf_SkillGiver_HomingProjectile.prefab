@@ -134,7 +134,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 6989870136315561471}
   _skill: {fileID: 11400000, guid: 6504da6f9911f984a9cd6ad78b004b1c, type: 2}
   _lifeTime: 10
-  _moveSpeed: 2.5
+  _moveSpeed: 1.5
   _rotationSpeedRange: {x: 20, y: 30}
   _visualRotationSpeedRange: {x: 10, y: 20}
   _scaleDuration: 1

@@ -170,6 +170,6 @@ MonoBehaviour:
   _speed: 3
   _life: 9
   _rotationSpeed: 0.1
-  _precisionDuration: 2.5
-  _imprecisionDuration: 1.5
+  _precisionDuration: 1.5
+  _imprecisionDuration: 0.5
   _target: {fileID: 11400000, guid: 1ad4381f928a69843a97a2428d2104f1, type: 2}

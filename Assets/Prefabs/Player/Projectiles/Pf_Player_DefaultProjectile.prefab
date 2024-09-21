@@ -167,7 +167,7 @@ MonoBehaviour:
   _damage: 2
   _lethality: 0
   _rb: {fileID: 2509563566510564824}
-  _speed: 10
+  _speed: 13
   _life: 3
   _rotationSpeed: 50
   _target: {fileID: 11400000, guid: 1aa0d555ab3d788488d91b6bc5e52407, type: 2}
