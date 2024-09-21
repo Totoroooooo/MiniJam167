@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace MiniJam167.Enemy
 {
-	public class EnemyBody : MonoBehaviour, IHittable
+	public class EnemyBody : MonoBehaviour, IHittable, ITargetable
 	{
 		[Serializable] public struct Phase
 		{
@@ -30,7 +30,9 @@ namespace MiniJam167.Enemy
 
 		public float Shield => _shield;
 		public float DamageMultiplier => _damageMultiplier;
-		
+		public bool Targetable => true;
+		public Vector3 Position => transform.position;
+
 		private float _maxHealth;
 		private float _health;
 		private float _phaseHealth;
@@ -38,6 +40,9 @@ namespace MiniJam167.Enemy
 		private int _currentPhase;
 
 		private readonly List<EnemyPart> _enabledParts = new();
+		
+		public Action<bool> TargetableChanged { get => _targetableChanged; set => _targetableChanged = value; }
+		private Action<bool> _targetableChanged;
 		
 		public delegate void HealthEvent(float health, float maxHealth, float phaseHealth, float phaseMaxHealth, float damage);
 		public delegate void PhaseEvent(int phase, int maxPhase);

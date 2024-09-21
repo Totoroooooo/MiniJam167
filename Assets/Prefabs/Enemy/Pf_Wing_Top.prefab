@@ -758,6 +758,7 @@ MonoBehaviour:
   - {fileID: 8258618822774645469}
   - {fileID: 5751916663109571689}
   - {fileID: 8399282782116871242}
+  _targetPosition: {fileID: 4353793543643917052}
   _maxHealth: 10
   _shield: 1
   _damageMultiplier: 1

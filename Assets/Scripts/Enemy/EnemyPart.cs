@@ -5,11 +5,13 @@ using UnityEngine;
 
 namespace MiniJam167.Enemy
 {
-	public class EnemyPart : MonoBehaviour, IHittable
+	public class EnemyPart : MonoBehaviour, IHittable, ITargetable
 	{
 		[SerializeField] private GameObject _container;
 		[SerializeField] private GameObject _corruptedContainer;
 		[SerializeField] private HitCollision[] _hitCollisions;
+		[Space]
+		[SerializeField] private Transform _targetPosition;
 		[Space]
 		[SerializeField] private float _maxHealth = 100f;
 		[SerializeField] private float _shield;
@@ -19,10 +21,16 @@ namespace MiniJam167.Enemy
 
 		public float Shield => _shield;
 		public float DamageMultiplier => _damageMultiplier;
+		public bool Targetable => _targetable;
+		public Vector3 Position => _targetPosition.position;
 		
+		private bool _targetable;
 		private float _health;
 		private Tween _tween;
 		private bool _isCorrupted;
+		
+		public Action<bool> TargetableChanged { get => _targetableChanged; set => _targetableChanged = value; }
+		private Action<bool> _targetableChanged;
 		
 		public delegate void TimedEvent(float duration);
 		public delegate void HitEvent(float health, float maxHealth, float damage);
@@ -64,6 +72,8 @@ namespace MiniJam167.Enemy
 
 		private void EnableCollision(bool enable)
 		{
+			_targetable = enable;
+			TargetableChanged?.Invoke(enable);
 			foreach (HitCollision collision in _hitCollisions)
 				collision.Enable(enable);
 		}
