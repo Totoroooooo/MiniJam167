@@ -2025,6 +2025,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8803898756194655807, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
+      propertyPath: _disableDuration
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2119,7 +2123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _fireRate
-      value: 0.25
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _projectilePool
@@ -2127,7 +2131,7 @@ PrefabInstance:
       objectReference: {fileID: 7709733165382315077}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _corruptFireRate
-      value: 1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7269684491633576363, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: _spawns.Array.data[0].Points.Array.data[0]
@@ -2188,6 +2192,10 @@ PrefabInstance:
     - target: {fileID: 7890722535605700509, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8803898756194655807, guid: 16a024e5a482fb449a2c94832eaa3a92, type: 3}
+      propertyPath: _disableDuration
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2434,6 +2442,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8839507001344043336, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
+      propertyPath: _disableDuration
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2524,7 +2536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7233515518226906844, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
       propertyPath: _fireRate
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7233515518226906844, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
       propertyPath: _projectilePool
@@ -2532,7 +2544,7 @@ PrefabInstance:
       objectReference: {fileID: 4697874097658264225}
     - target: {fileID: 7233515518226906844, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
       propertyPath: _corruptFireRate
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7233515518226906844, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
       propertyPath: _spawns.Array.size
@@ -2621,6 +2633,10 @@ PrefabInstance:
     - target: {fileID: 7854556856406929642, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839507001344043336, guid: 920b336fede9bb74eb363de885e0ff12, type: 3}
+      propertyPath: _disableDuration
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2719,6 +2735,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2516047031122847149, guid: 189641f12b2b2314996852955dd80090, type: 3}
+      propertyPath: _disableDuration
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3838767146034150415, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.46
@@ -2777,7 +2797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _fireRate
-      value: 0.25
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _projectilePool
@@ -2785,7 +2805,7 @@ PrefabInstance:
       objectReference: {fileID: 7709733165382315077}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _corruptFireRate
-      value: 1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _spawns.Array.data[0].Points.Array.data[0]
@@ -2952,6 +2972,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2516047031122847149, guid: 189641f12b2b2314996852955dd80090, type: 3}
+      propertyPath: _disableDuration
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3838767146034150415, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: m_LocalScale.x
       value: -0.46
@@ -3010,7 +3034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _fireRate
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _projectilePool
@@ -3018,7 +3042,7 @@ PrefabInstance:
       objectReference: {fileID: 4697874097658264225}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _corruptFireRate
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4333707149151629881, guid: 189641f12b2b2314996852955dd80090, type: 3}
       propertyPath: _spawns.Array.data[0].Points.Array.data[0]
