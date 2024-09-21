@@ -185,6 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e591d9862469fa4298d2213360ba595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targets: []
+  _target: {fileID: 0}
+  _targetRadio: {fileID: 11400000, guid: 1aa0d555ab3d788488d91b6bc5e52407, type: 2}
 --- !u!70 &843078228801301821
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

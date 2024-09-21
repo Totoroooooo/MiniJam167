@@ -23,6 +23,7 @@ namespace MiniJam167.Enemy
 		public float DamageMultiplier => _damageMultiplier;
 		public bool Targetable => _targetable;
 		public Vector3 Position => _targetPosition.position;
+		public Transform Transform => _targetPosition.transform;
 		
 		private bool _targetable;
 		private float _health;

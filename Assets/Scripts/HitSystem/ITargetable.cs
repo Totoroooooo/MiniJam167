@@ -7,6 +7,7 @@ namespace MiniJam167.HitSystem
     {
         public bool Targetable { get; }
         public Vector3 Position { get; }
+        public Transform Transform { get; }
 
         public Action<bool> TargetableChanged { get; set; }
     }

@@ -18,7 +18,6 @@ namespace MiniJam167.Enemy
 		[SerializeField] private Collider2D _normalCollider;
 		[SerializeField] private Collider2D _corruptedCollider;
 		[SerializeField] private EnemyPart[] _protectionParts;
-		[SerializeField] private TransformRadio _enemyRadio;
 
 		[Header("Phases")]
 		[SerializeField] private Phase[] _phases;
@@ -32,17 +31,13 @@ namespace MiniJam167.Enemy
 		public float DamageMultiplier => _damageMultiplier;
 		public bool Targetable => true;
 		public Vector3 Position => transform.position;
+		public Transform Transform => transform;
 
 		private float _maxHealth;
 		private float _health;
 		private float _phaseHealth;
-		
 		private int _currentPhase;
-
 		private readonly List<EnemyPart> _enabledParts = new();
-		
-		public Action<bool> TargetableChanged { get => _targetableChanged; set => _targetableChanged = value; }
-		private Action<bool> _targetableChanged;
 		
 		public delegate void HealthEvent(float health, float maxHealth, float phaseHealth, float phaseMaxHealth, float damage);
 		public delegate void PhaseEvent(int phase, int maxPhase);
@@ -52,16 +47,9 @@ namespace MiniJam167.Enemy
 		public event Action Shielded;
 		public event Action Died;
 		public event Action Hitted;
-
-		private void Awake()
-		{
-			_enemyRadio.Value = transform;
-		}
-
-		private void OnDestroy()
-		{
-			_enemyRadio.Value = null;
-		}
+		public Action<bool> TargetableChanged { get => _targetableChanged; set => _targetableChanged = value; }
+		private Action<bool> _targetableChanged;
+		
 
 		public void Init()
         {
