@@ -293,11 +293,13 @@ MonoBehaviour:
   Event: 
   PlayEvent: 0
   StopEvent: 0
-  AllowFadeout: 0
+  AllowFadeout: 1
   TriggerOnce: 0
   Preload: 1
   NonRigidbodyVelocity: 0
-  Params: []
+  Params:
+  - Name: Vanilla Release
+    Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -544,7 +546,11 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 1
   NonRigidbodyVelocity: 0
-  Params: []
+  Params:
+  - Name: Volume Music
+    Value: 8
+  - Name: PhaseChange
+    Value: 1
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -556,7 +562,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303729508}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -748,7 +754,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848804652}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75193cb43f11fb44eb8cd2d82fcfe0f0, type: 3}
   m_Name: 
