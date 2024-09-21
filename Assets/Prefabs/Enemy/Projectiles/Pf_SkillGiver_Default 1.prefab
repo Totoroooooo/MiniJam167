@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8663601945206749084}
   - component: {fileID: 4361389670745213577}
   m_Layer: 9
-  m_Name: Pf_SkillGiver_Default
+  m_Name: Pf_SkillGiver_Default 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,10 +134,10 @@ MonoBehaviour:
   _bottomLeftRadio: {fileID: 11400000, guid: 29cfe65f0547da2409adc2c30bb105e4, type: 2}
   _rigidbody: {fileID: 6989870136315561471}
   _skill: {fileID: 11400000, guid: 443bd97ccd4c4e447928fca50f91d8e1, type: 2}
-  _lifeTime: 10
+  _lifeTime: 7.5
   _moveSpeed: 2
-  _rotationSpeedRange: {x: 20, y: 30}
-  _visualRotationSpeedRange: {x: 10, y: 20}
+  _rotationSpeedRange: {x: 17, y: 17}
+  _visualRotationSpeedRange: {x: 0, y: 0}
   _scaleDuration: 1
 --- !u!66 &8663601945206749084
 CompositeCollider2D:
