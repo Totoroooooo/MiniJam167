@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{264e21cb-f555-464e-add7-25e7a97d4dfa}">
+		<property name="name">
+			<value>TrackerBoss Release</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2acce1de-7902-4e60-88a8-e6c166dd6bfc}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{1c6a8999-590c-4802-97bb-937b2a04c026}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{1c6a8999-590c-4802-97bb-937b2a04c026}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
