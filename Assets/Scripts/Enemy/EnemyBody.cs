@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using MiniJam167.HitSystem;
-using MiniJam167.Utility;
 using UnityEngine;
 
 namespace MiniJam167.Enemy
