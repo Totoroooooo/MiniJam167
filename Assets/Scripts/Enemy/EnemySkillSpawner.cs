@@ -93,6 +93,7 @@ namespace MiniJam167.Enemy
 
         private void OnEnabled()
         {
+            if (_isCorrupted) return;
             _delay = _fireRate == 0 ? 0 : 1f / _fireRate;
             _timer = _delay;
             SetNewPattern();

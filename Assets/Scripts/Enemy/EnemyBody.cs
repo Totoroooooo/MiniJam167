@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using FMODUnity;
 using MiniJam167.HitSystem;
 using UnityEngine;
 
@@ -24,6 +25,9 @@ namespace MiniJam167.Enemy
 		[Header("Health")]
 		[SerializeField] private float _shield;
 		[SerializeField] private float _damageMultiplier = 1;
+		
+		[Header("FMOD")]
+		[SerializeField] private StudioEventEmitter _musicEventEmitter;
 		
 
 		public float Shield => _shield;
@@ -71,6 +75,7 @@ namespace MiniJam167.Enemy
         private void NextPhase()
         {
             _currentPhase++;
+            _musicEventEmitter.SetParameter("PhaseChange", _currentPhase + 2);
             switch (_currentPhase)
             {
 	            case int i when i < _phases.Length - 1 && i >= 0 :
