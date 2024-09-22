@@ -1092,6 +1092,21 @@ MonoBehaviour:
   - Renderer: {fileID: 6525594781812245027}
     NormalSprite: {fileID: 21300000, guid: 01077542faa286b45af6fb593678d819, type: 3}
     CorruptedSprite: {fileID: 0}
+  - Renderer: {fileID: 3155575243508218104}
+    NormalSprite: {fileID: 21300000, guid: 5fc3aa951a8dd1d4aa06e12bc9b012c0, type: 3}
+    CorruptedSprite: {fileID: 0}
+  - Renderer: {fileID: 5289781856933019160}
+    NormalSprite: {fileID: 21300000, guid: deaa12234a1f0674a90748904ee56a75, type: 3}
+    CorruptedSprite: {fileID: 0}
+  - Renderer: {fileID: 2698585827865546394}
+    NormalSprite: {fileID: 21300000, guid: a74a9c9fb07609b4d92150efe25eee33, type: 3}
+    CorruptedSprite: {fileID: 0}
+  - Renderer: {fileID: 3291725000122504791}
+    NormalSprite: {fileID: 21300000, guid: 21f109af9f3c31e49b5c4e579f6011ff, type: 3}
+    CorruptedSprite: {fileID: 0}
+  - Renderer: {fileID: 8679187520648269051}
+    NormalSprite: {fileID: 21300000, guid: 086983c183bc6394b9a5e49009786c53, type: 3}
+    CorruptedSprite: {fileID: 0}
   _normalGradient:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
