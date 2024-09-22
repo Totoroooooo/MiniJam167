@@ -59,7 +59,7 @@ namespace MiniJam167.Enemy
 
 		public void OnHit(IHitter hitter)
 		{
-			_hitEventEmitter.Play();
+			//_hitEventEmitter.Play();
 			float damage = Mathf.Min(_health, this.GetHitDamage(hitter));
 			_health -= damage;
 			Hit?.Invoke(_health, _maxHealth, damage);
