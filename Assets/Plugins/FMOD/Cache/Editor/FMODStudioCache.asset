@@ -23,7 +23,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 4304127753572469764}
   MinDistance: 0
   MaxDistance: 0
   Length: 1920
@@ -47,6 +48,30 @@ MonoBehaviour:
   ID:
     data1: 3446412673
     data2: 744095345
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-9058151368766270148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ZoneEnter/Volume SFX
+  m_EditorClassIdentifier: 
+  Name: Volume SFX
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 7.3999996
+  ID:
+    data1: 3609390710
+    data2: 3596114714
   Type: 0
   IsGlobal: 0
   Labels: []
@@ -76,6 +101,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: -9090669684905605687}
+  - {fileID: -1841713026035701662}
   MinDistance: 0
   MaxDistance: 0
   Length: 5520
@@ -104,44 +130,10 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: -7575147918380645255}
+  - {fileID: -1031029499521671914}
   MinDistance: 0
   MaxDistance: 0
   Length: 13320
---- !u!114 &-7947488644316726839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Menu/Volume FX
-  m_EditorClassIdentifier: 
-  Path: event:/Menu/Volume FX
-  Guid:
-    Data1: 262879368
-    Data2: 1301135191
-    Data3: -689776734
-    Data4: 1781474080
-  Banks:
-  - {fileID: -3264287597166808644}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -4910731381737311010}
-  - {fileID: -2656862152422328425}
-  - {fileID: 6693385112791826141}
-  - {fileID: 3142670057209166601}
-  - {fileID: 4554584800708706752}
-  - {fileID: 1910156168977805965}
-  - {fileID: -1384973458579345476}
-  - {fileID: -7020766297781464671}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2000
 --- !u!114 &-7575147918380645255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +181,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -2259000432599065694}
   MinDistance: 0
   MaxDistance: 0
   Length: 4640
@@ -218,33 +211,10 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -6748323012518521665}
+  - {fileID: -3714419325213959098}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-7020766297781464671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Volume FX/TrackerBoss Release
-  m_EditorClassIdentifier: 
-  Name: TrackerBoss Release
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 767612776
-    data2: 1793505741
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-6841670392492994154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,10 +286,35 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 7321300236946600504}
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
+--- !u!114 &-6568414187229815655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Amb/Volume SFX
+  m_EditorClassIdentifier: 
+  Name: Volume SFX
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 7.3999996
+  ID:
+    data1: 3609390710
+    data2: 3596114714
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-6326464434975255568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,35 +357,13 @@ MonoBehaviour:
   - {fileID: -3264287597166808644}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
-  Parameters: []
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8383215934222197795}
+  - {fileID: 15886910534193840}
   MinDistance: 0
   MaxDistance: 0
   Length: 1920
---- !u!114 &-4910731381737311010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Volume FX/Charge
-  m_EditorClassIdentifier: 
-  Name: Charge
-  StudioPath: 
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 3137012513
-    data2: 2892641402
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-4540097559661215098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +412,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-4144831370031945019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TrackerBoss/Volume SFX
+  m_EditorClassIdentifier: 
+  Name: Volume SFX
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 7.3999996
+  ID:
+    data1: 3609390710
+    data2: 3596114714
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4138896822312740413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,6 +456,30 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1000
   Exists: 1
+--- !u!114 &-3714419325213959098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/WingState/Volume SFX
+  m_EditorClassIdentifier: 
+  Name: Volume SFX
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 7.3999996
+  ID:
+    data1: 3609390710
+    data2: 3596114714
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-3264287597166808644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,12 +495,12 @@ MonoBehaviour:
   Path: FMod Assets/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638625638417438325
+  lastModified: 638625721688753049
   FileSizes:
   - Name: Desktop
-    Value: 4694656
+    Value: 4693408
   Exists: 1
---- !u!114 &-2656862152422328425
+--- !u!114 &-2346634636500621681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -489,13 +510,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Volume FX/Volume SFX
+  m_Name: parameter:/Vanilla/Volume SFX
   m_EditorClassIdentifier: 
   Name: Volume SFX
   StudioPath: 
   Min: 0
   Max: 10
-  Default: 0
+  Default: 7.3999996
+  ID:
+    data1: 3609390710
+    data2: 3596114714
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2259000432599065694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CharaDeath/Volume SFX
+  m_EditorClassIdentifier: 
+  Name: Volume SFX
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 7.3999996
   ID:
     data1: 3609390710
     data2: 3596114714
@@ -526,10 +571,35 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 9040249569477202081}
   MinDistance: 0
   MaxDistance: 0
   Length: 13920
+--- !u!114 &-1841713026035701662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Tracker/Volume SFX
+  m_EditorClassIdentifier: 
+  Name: Volume SFX
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 7.3999996
+  ID:
+    data1: 3609390710
+    data2: 3596114714
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-1407721195963593638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,10 +625,11 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: -4540097559661215098}
+  - {fileID: 5136439846738610386}
   MinDistance: 0
   MaxDistance: 0
   Length: 8400
---- !u!114 &-1384973458579345476
+--- !u!114 &-1031029499521671914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -568,16 +639,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Volume FX/Tracker Release
+  m_Name: parameter:/Laser/Volume SFX
   m_EditorClassIdentifier: 
-  Name: Tracker Release
+  Name: Volume SFX
   StudioPath: 
   Min: 0
-  Max: 1
-  Default: 0
+  Max: 10
+  Default: 7.3999996
   ID:
-    data1: 3446412673
-    data2: 744095345
+    data1: 3609390710
+    data2: 3596114714
   Type: 0
   IsGlobal: 0
   Labels: []
@@ -607,6 +678,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: -4306281919303442378}
+  - {fileID: -4144831370031945019}
   MinDistance: 0
   MaxDistance: 0
   Length: 5520
@@ -650,7 +722,6 @@ MonoBehaviour:
   - {fileID: 1489351575626154823}
   - {fileID: -9156806904916593012}
   - {fileID: 4650542337333940391}
-  - {fileID: -7947488644316726839}
   - {fileID: 2527376223465760899}
   - {fileID: -8902959366373096234}
   - {fileID: 7157406435609257440}
@@ -667,8 +738,32 @@ MonoBehaviour:
   - {fileID: -3264287597166808644}
   StringsBanks:
   - {fileID: 7287567867184715047}
-  cacheTime: 638625638417478230
+  cacheTime: 638625721688803053
   cacheVersion: 131619
+--- !u!114 &15886910534193840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Flap/PhaseChange
+  m_EditorClassIdentifier: 
+  Name: PhaseChange
+  StudioPath: 
+  Min: 1
+  Max: 5
+  Default: 1
+  ID:
+    data1: 3062531342
+    data2: 2951877714
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &774493091824199558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,34 +811,11 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -9058151368766270148}
   MinDistance: 0
   MaxDistance: 0
   Length: 480
---- !u!114 &1910156168977805965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Volume FX/LaserBoss Release
-  m_EditorClassIdentifier: 
-  Name: LaserBoss Release
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 3011935978
-    data2: 1391921532
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &1913217198197316809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,11 +859,12 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 2596699985784154956}
   MinDistance: 0
   MaxDistance: 0
   Length: 3840
---- !u!114 &3142670057209166601
+--- !u!114 &2596699985784154956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -801,21 +874,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Volume FX/Vanilla Release
+  m_Name: parameter:/Heal/Volume SFX
   m_EditorClassIdentifier: 
-  Name: Vanilla Release
+  Name: Volume SFX
   StudioPath: 
   Min: 0
-  Max: 1
-  Default: 0
+  Max: 10
+  Default: 7.3999996
   ID:
-    data1: 413850655
-    data2: 426657823
+    data1: 3609390710
+    data2: 3596114714
   Type: 0
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &4554584800708706752
+--- !u!114 &4304127753572469764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -825,17 +898,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Volume FX/PhaseChange
+  m_Name: parameter:/CharaHit/Volume SFX
   m_EditorClassIdentifier: 
-  Name: PhaseChange
+  Name: Volume SFX
   StudioPath: 
-  Min: 1
-  Max: 5
-  Default: 1
+  Min: 0
+  Max: 10
+  Default: 7.3999996
   ID:
-    data1: 3062531342
-    data2: 2951877714
-  Type: 1
+    data1: 3609390710
+    data2: 3596114714
+  Type: 0
   IsGlobal: 0
   Labels: []
   Exists: 1
@@ -864,9 +937,34 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 774493091824199558}
+  - {fileID: -2346634636500621681}
   MinDistance: 0
   MaxDistance: 0
   Length: 600
+--- !u!114 &5136439846738610386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LaserBoss/Volume SFX
+  m_EditorClassIdentifier: 
+  Name: Volume SFX
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 7.3999996
+  ID:
+    data1: 3609390710
+    data2: 3596114714
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &5758740696097189468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -948,30 +1046,6 @@ MonoBehaviour:
   - Name: Plugins
     Value: 870
   Exists: 1
---- !u!114 &6693385112791826141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Volume FX/WingState
-  m_EditorClassIdentifier: 
-  Name: WingState
-  StudioPath: 
-  Min: 1
-  Max: 2
-  Default: 1
-  ID:
-    data1: 2789609621
-    data2: 3791465036
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &6762987703586919994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,6 +1071,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 7255907343748386267}
+  - {fileID: -6568414187229815655}
   MinDistance: 0
   MaxDistance: 0
   Length: 55824
@@ -1068,8 +1143,80 @@ MonoBehaviour:
   Path: FMod Assets/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638625638417478230
+  lastModified: 638625721688803053
   FileSizes:
   - Name: Desktop
-    Value: 1804
+    Value: 1890
+  Exists: 1
+--- !u!114 &7321300236946600504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BossHit/Volume SFX
+  m_EditorClassIdentifier: 
+  Name: Volume SFX
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 7.3999996
+  ID:
+    data1: 3609390710
+    data2: 3596114714
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8383215934222197795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Flap/Volume SFX
+  m_EditorClassIdentifier: 
+  Name: Volume SFX
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 7.3999996
+  ID:
+    data1: 3609390710
+    data2: 3596114714
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &9040249569477202081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BossWin/Volume SFX
+  m_EditorClassIdentifier: 
+  Name: Volume SFX
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 7.3999996
+  ID:
+    data1: 3609390710
+    data2: 3596114714
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
