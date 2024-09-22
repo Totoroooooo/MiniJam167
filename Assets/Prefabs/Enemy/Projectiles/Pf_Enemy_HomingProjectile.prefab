@@ -162,6 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5540cddfc7bb4f198e145a4e0116192c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _topRightRadio: {fileID: 11400000, guid: 5e94df67952ce6141abc086e0411a6b2, type: 2}
+  _bottomLeftRadio: {fileID: 11400000, guid: 29cfe65f0547da2409adc2c30bb105e4, type: 2}
   _setScaleOnSpawn: 1
   _lossyScale: 0.2
   SoundCaller: {fileID: 11400000, guid: fc0046218c9daa445b098bfeffa81786, type: 2}
@@ -169,7 +171,6 @@ MonoBehaviour:
   _lethality: 0
   _rb: {fileID: 2509563566510564824}
   _speed: 3
-  _life: 9
   _rotationSpeed: 0.1
   _precisionDuration: 1.5
   _imprecisionDuration: 0.5
@@ -189,11 +190,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 122769075
-      Data2: 1221846392
-      Data3: 751621821
-      Data4: -347051173
-    Path: event:/Attack/Tracker
+      Data1: 1606924320
+      Data2: 1217293676
+      Data3: 236047795
+      Data4: -437832744
+    Path: event:/Attack/TrackerBoss
   Event: 
   PlayEvent: 11
   StopEvent: 12
@@ -202,7 +203,7 @@ MonoBehaviour:
   Preload: 0
   NonRigidbodyVelocity: 0
   Params:
-  - Name: Tracker Release
+  - Name: TrackerBoss Release
     Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 0

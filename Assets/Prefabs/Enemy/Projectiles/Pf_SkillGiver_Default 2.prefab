@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _setScaleOnSpawn: 1
   _lossyScale: 0.6
+  _life: 0
   SoundCaller: {fileID: 0}
   _topRightRadio: {fileID: 11400000, guid: 5e94df67952ce6141abc086e0411a6b2, type: 2}
   _bottomLeftRadio: {fileID: 11400000, guid: 29cfe65f0547da2409adc2c30bb105e4, type: 2}

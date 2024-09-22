@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e67b5f58407b1442b0a7a6495cf21af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _topRightRadio: {fileID: 11400000, guid: 5e94df67952ce6141abc086e0411a6b2, type: 2}
+  _bottomLeftRadio: {fileID: 11400000, guid: 29cfe65f0547da2409adc2c30bb105e4, type: 2}
   _setScaleOnSpawn: 1
   _lossyScale: 0.2
   SoundCaller: {fileID: 0}
@@ -107,7 +109,6 @@ MonoBehaviour:
   _lethality: 0
   _rb: {fileID: 2509563566510564824}
   _speed: 5
-  _life: 3
 --- !u!50 &2509563566510564824
 Rigidbody2D:
   serializedVersion: 4

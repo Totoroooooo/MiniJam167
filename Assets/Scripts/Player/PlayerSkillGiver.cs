@@ -1,7 +1,5 @@
-using System;
 using DG.Tweening;
 using MiniJam167.Projectile;
-using MiniJam167.Utility;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,10 +8,6 @@ namespace MiniJam167.Player
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerSkillGiver : ProjectileController
     {
-        [Header("Bounds")]
-        [SerializeField] private VectorRadio _topRightRadio;
-        [SerializeField] private VectorRadio _bottomLeftRadio;
-        
         [Header("Components")]
         [SerializeField] private Rigidbody2D _rigidbody;
         [Space]
@@ -34,14 +28,6 @@ namespace MiniJam167.Player
         private float _currentRotation;
         private float _currentVisualRotation;
         private Tween _lifeTween;
-        private Vector2 _distance;
-
-        private void Awake()
-        {
-            _distance = _topRightRadio.Value - _bottomLeftRadio.Value;
-            _distance.x = Mathf.Abs(_distance.x);
-            _distance.y = Mathf.Abs(_distance.y);
-        }
 
         private void OnDestroy()
         {
@@ -72,21 +58,6 @@ namespace MiniJam167.Player
             
             _currentRotation = (_currentRotation + _rotationSpeed * Time.deltaTime) % 360;
             _rigidbody.velocity = Quaternion.Euler(0, 0, _currentRotation) * Vector3.one * _moveSpeed;
-        }
-
-        private void FixedUpdate()
-        {
-            Vector3 position = transform.position;
-            
-            if (position.x > _topRightRadio.Value.x)
-                transform.position = new Vector2(position.x - _distance.x, position.y);
-            else if (position.x < _bottomLeftRadio.Value.x)
-                transform.position = new Vector2(position.x + _distance.x, position.y);
-            
-            if (position.y > _topRightRadio.Value.y)
-                transform.position = new Vector2(position.x, position.y - _distance.y);
-            else if (position.y < _bottomLeftRadio.Value.y)
-                transform.position = new Vector2(position.x, position.y + _distance.y);
         }
 
         protected override void OnSpawn(Vector2 position, Quaternion rotation)

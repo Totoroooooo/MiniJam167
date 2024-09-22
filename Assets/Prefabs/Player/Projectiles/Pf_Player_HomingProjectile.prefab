@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2509563566510564824}
   - component: {fileID: 5685102541204107273}
   - component: {fileID: 6368290622121501231}
+  - component: {fileID: 4727503412665265066}
   m_Layer: 7
   m_Name: Pf_Player_HomingProjectile
   m_TagString: Untagged
@@ -161,6 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5540cddfc7bb4f198e145a4e0116192c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _topRightRadio: {fileID: 11400000, guid: 5e94df67952ce6141abc086e0411a6b2, type: 2}
+  _bottomLeftRadio: {fileID: 11400000, guid: 29cfe65f0547da2409adc2c30bb105e4, type: 2}
   _setScaleOnSpawn: 1
   _lossyScale: 0.2
   SoundCaller: {fileID: 11400000, guid: fc0046218c9daa445b098bfeffa81786, type: 2}
@@ -168,8 +171,38 @@ MonoBehaviour:
   _lethality: 3
   _rb: {fileID: 2509563566510564824}
   _speed: 5
-  _life: 18
   _rotationSpeed: 0.1
   _precisionDuration: 4
   _imprecisionDuration: 4
   _target: {fileID: 11400000, guid: 1aa0d555ab3d788488d91b6bc5e52407, type: 2}
+--- !u!114 &4727503412665265066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651679100995585423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 122769075
+      Data2: 1221846392
+      Data3: 751621821
+      Data4: -347051173
+    Path: event:/Attack/Tracker
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0

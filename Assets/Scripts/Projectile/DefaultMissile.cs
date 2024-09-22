@@ -11,9 +11,6 @@ namespace MiniJam167.Projectile
         
         [Header("Settings")]
         [SerializeField] protected float _speed = 3;
-        [SerializeField] private float _life = 3;
-        
-        private Tween _lifeTween;
 
         private void Reset()
         {
@@ -23,12 +20,11 @@ namespace MiniJam167.Projectile
         protected override void OnSpawn(Vector2 position, Quaternion rotation)
         {
             _rb.velocity = rotation * Vector2.up * _speed;
-            _lifeTween = DOVirtual.DelayedCall(_life, Release).Play();
         }
 
         protected override void OnRelease()
         {
-            _lifeTween?.Kill();
+            _rb.velocity = Vector2.zero;
         }
     }
 }

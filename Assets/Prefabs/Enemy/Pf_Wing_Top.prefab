@@ -956,6 +956,8 @@ GameObject:
   - component: {fileID: 2130099622014328234}
   - component: {fileID: 6280824498495073791}
   - component: {fileID: 7269684491633576363}
+  - component: {fileID: 9114414514660829497}
+  - component: {fileID: 7699554282140074915}
   m_Layer: 8
   m_Name: Pf_Wing_Top
   m_TagString: Untagged
@@ -992,6 +994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3167c53ace84df744a928c4b1614ac2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitEventEmitter: {fileID: 7699554282140074915}
+  _wingStateEmitter: {fileID: 9114414514660829497}
   _container: {fileID: 5583895364636221810}
   _corruptedContainer: {fileID: 2416576634718758664}
   _hitCollisions:
@@ -1171,6 +1175,68 @@ MonoBehaviour:
   _fireRate: 3
   _corruptFireRate: 5
   _part: {fileID: 8803898756194655807}
+--- !u!114 &9114414514660829497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2335661266735093196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2099490472
+      Data2: 1228065677
+      Data3: -1713176142
+      Data4: -67731027
+    Path: event:/Event/WingState
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &7699554282140074915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2335661266735093196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -102167921
+      Data2: 1214818345
+      Data3: 1682980765
+      Data4: 1767146957
+    Path: event:/Event/WingHit
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &2416576634718758664
 GameObject:
   m_ObjectHideFlags: 0

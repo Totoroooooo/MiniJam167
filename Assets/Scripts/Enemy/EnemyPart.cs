@@ -1,5 +1,6 @@
 ﻿using System;
 using DG.Tweening;
+using FMODUnity;
 using MiniJam167.HitSystem;
 using UnityEngine;
 
@@ -7,6 +8,9 @@ namespace MiniJam167.Enemy
 {
 	public class EnemyPart : MonoBehaviour, IHittable, ITargetable
 	{
+		[SerializeField] private StudioEventEmitter _hitEventEmitter;
+		[SerializeField] private StudioEventEmitter _wingStateEmitter;
+		[Space]
 		[SerializeField] private GameObject _container;
 		[SerializeField] private GameObject _corruptedContainer;
 		[SerializeField] private HitCollision[] _hitCollisions;
@@ -55,6 +59,7 @@ namespace MiniJam167.Enemy
 
 		public void OnHit(IHitter hitter)
 		{
+			_hitEventEmitter.Play();
 			float damage = Mathf.Min(_health, this.GetHitDamage(hitter));
 			_health -= damage;
 			Hit?.Invoke(_health, _maxHealth, damage);
@@ -73,6 +78,8 @@ namespace MiniJam167.Enemy
 
 		private void EnableCollision(bool enable)
 		{
+			_wingStateEmitter.SetParameter("WingState", 2);
+			_wingStateEmitter.Play();
 			_targetable = enable;
 			TargetableChanged?.Invoke(enable);
 			foreach (HitCollision collision in _hitCollisions)
@@ -112,6 +119,8 @@ namespace MiniJam167.Enemy
 
 		public void Die()
 		{
+			_wingStateEmitter.SetParameter("WingState", 1);
+			_wingStateEmitter.Play();
 			EnableCollision(false);
 			Died?.Invoke();
 		}

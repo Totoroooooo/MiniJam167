@@ -8,8 +8,9 @@ namespace MiniJam167.Projectile
         [SerializeField] private float _rotationSpeed = 1f;
         [SerializeField] private TransformRadio _target;
 
-        private void Update()
+        protected override void Update()
         {
+            base.Update();
             Vector2 direction = (_target.Value.transform.position - transform.position).normalized;
             float angle = Vector3.SignedAngle(transform.up, direction, transform.forward);
             angle = Mathf.Sign(angle) * Mathf.Min(Mathf.Abs(angle), _rotationSpeed * Time.deltaTime);

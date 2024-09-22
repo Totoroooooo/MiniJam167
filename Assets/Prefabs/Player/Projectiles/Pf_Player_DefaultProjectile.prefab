@@ -307,6 +307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea780c8602f64267adc5fc87f9922253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _topRightRadio: {fileID: 11400000, guid: 5e94df67952ce6141abc086e0411a6b2, type: 2}
+  _bottomLeftRadio: {fileID: 11400000, guid: 29cfe65f0547da2409adc2c30bb105e4, type: 2}
   _setScaleOnSpawn: 1
   _lossyScale: 0.2
   SoundCaller: {fileID: 11400000, guid: 3e27c0a318680b9438199deb1d85cf04, type: 2}
@@ -314,6 +316,5 @@ MonoBehaviour:
   _lethality: 0
   _rb: {fileID: 2509563566510564824}
   _speed: 13
-  _life: 3
   _rotationSpeed: 0
   _target: {fileID: 11400000, guid: 1aa0d555ab3d788488d91b6bc5e52407, type: 2}

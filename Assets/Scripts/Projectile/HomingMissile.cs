@@ -26,8 +26,9 @@ namespace MiniJam167.Projectile
                 .Play();
         }
 
-        private void Update()
+        protected override void Update()
         {
+            base.Update();
             Vector2 direction = _target.Value.transform.position - transform.position;
             transform.up = Vector3.Lerp(transform.up, direction.normalized, _currentRotationSpeed);
             _rb.velocity = transform.up * _speed;
@@ -35,6 +36,7 @@ namespace MiniJam167.Projectile
         
         protected override void OnRelease()
         {
+            _rb.velocity = Vector2.zero;
             base.OnRelease();
             _homingDecaySequence?.Kill();
         }
