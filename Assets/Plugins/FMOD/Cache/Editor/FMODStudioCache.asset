@@ -138,7 +138,7 @@ MonoBehaviour:
   - {fileID: 4554584800708706752}
   - {fileID: 1910156168977805965}
   - {fileID: -1384973458579345476}
-  - {fileID: -3788162257237861941}
+  - {fileID: -7020766297781464671}
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
@@ -221,6 +221,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-7020766297781464671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Volume FX/TrackerBoss Release
+  m_EditorClassIdentifier: 
+  Name: TrackerBoss Release
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 767612776
+    data2: 1793505741
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-6841670392492994154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +415,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-4306281919303442378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TrackerBoss/TrackerBoss Release
+  m_EditorClassIdentifier: 
+  Name: TrackerBoss Release
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 767612776
+    data2: 1793505741
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4138896822312740413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,30 +459,6 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1000
   Exists: 1
---- !u!114 &-3788162257237861941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Volume FX/TrackerBoss Release
-  m_EditorClassIdentifier: 
-  Name: TrackerBoss Release
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 767612776
-    data2: 1793505741
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-3264287597166808644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,10 +474,10 @@ MonoBehaviour:
   Path: FMod Assets/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638625600458750807
+  lastModified: 638625638417438325
   FileSizes:
   - Name: Desktop
-    Value: 4697632
+    Value: 4694656
   Exists: 1
 --- !u!114 &-2656862152422328425
 MonoBehaviour:
@@ -558,6 +582,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-800346316575764833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Attack/TrackerBoss
+  m_EditorClassIdentifier: 
+  Path: event:/Attack/TrackerBoss
+  Guid:
+    Data1: 1606924320
+    Data2: 1217293676
+    Data3: 236047795
+    Data4: -437832744
+  Banks:
+  - {fileID: -3264287597166808644}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4306281919303442378}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 5520
 --- !u!114 &-85866670375084103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,14 +661,13 @@ MonoBehaviour:
   - {fileID: -7048013809453704104}
   - {fileID: -7399398293897020782}
   - {fileID: -5018515576132023804}
-  - {fileID: 8205294581263574182}
-  - {fileID: 7133956575332092000}
+  - {fileID: -800346316575764833}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3264287597166808644}
   StringsBanks:
   - {fileID: 7287567867184715047}
-  cacheTime: 638625600462107714
+  cacheTime: 638625638417478230
   cacheVersion: 131619
 --- !u!114 &774493091824199558
 MonoBehaviour:
@@ -669,30 +720,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 480
---- !u!114 &1796323937028777029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TrackerBoss/TrackerBoss Release
-  m_EditorClassIdentifier: 
-  Name: TrackerBoss Release
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 767612776
-    data2: 1793505741
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &1910156168977805965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -973,33 +1000,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 55824
---- !u!114 &7133956575332092000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Event/WingHit
-  m_EditorClassIdentifier: 
-  Path: event:/Event/WingHit
-  Guid:
-    Data1: -102167921
-    Data2: 1214818345
-    Data3: 1682980765
-    Data4: 1767146957
-  Banks:
-  - {fileID: -3264287597166808644}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2000
 --- !u!114 &7157406435609257440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1068,36 +1068,8 @@ MonoBehaviour:
   Path: FMod Assets/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638625600462107714
+  lastModified: 638625638417478230
   FileSizes:
   - Name: Desktop
-    Value: 1850
+    Value: 1804
   Exists: 1
---- !u!114 &8205294581263574182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Attack/TrackerBoss
-  m_EditorClassIdentifier: 
-  Path: event:/Attack/TrackerBoss
-  Guid:
-    Data1: 1606924320
-    Data2: 1217293676
-    Data3: 236047795
-    Data4: -437832744
-  Banks:
-  - {fileID: -3264287597166808644}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 1796323937028777029}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 5520
