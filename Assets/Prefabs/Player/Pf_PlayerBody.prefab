@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7041186781671640906}
   - component: {fileID: 6914657024348885958}
   - component: {fileID: 6034496265475030772}
+  - component: {fileID: 3736801472395577607}
+  - component: {fileID: 4351129235252360554}
   - component: {fileID: 8022147316710419956}
   - component: {fileID: 843078228801301821}
   m_Layer: 6
@@ -173,6 +175,70 @@ MonoBehaviour:
   _hitDuration: 0.5
   _bottomLeftCorner: {fileID: 0}
   _topRightCorner: {fileID: 0}
+  _hitEventEmitter: {fileID: 3736801472395577607}
+  _deathEventEmitter: {fileID: 4351129235252360554}
+--- !u!114 &3736801472395577607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5018243507977838457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 205229361
+      Data2: 1204125773
+      Data3: 1575335607
+      Data4: -1309522260
+    Path: event:/Event/CharaHit
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &4351129235252360554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5018243507977838457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -250781808
+      Data2: 1106961118
+      Data3: 1152064931
+      Data4: 433311985
+    Path: event:/Event/CharaDeath
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!114 &8022147316710419956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +251,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e591d9862469fa4298d2213360ba595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targets: []
+  _target: {fileID: 0}
+  _targetRadio: {fileID: 11400000, guid: 1aa0d555ab3d788488d91b6bc5e52407, type: 2}
 --- !u!70 &843078228801301821
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

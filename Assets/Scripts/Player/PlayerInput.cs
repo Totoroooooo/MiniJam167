@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using MiniJam167.HitSystem;
+using MiniJam167.Utility;
 using UnityEngine;
 
 namespace MiniJam167.Player
@@ -8,6 +9,7 @@ namespace MiniJam167.Player
     {
         [SerializeField] private GameObject[] _targets;
         [SerializeField] private GameObject _target;
+        [SerializeField] private TransformRadio _targetRadio;
         
         private ITargetable GetTarget => _targetList[_currentTargetIndex];
         private GameObject GetTargetObject => _targets[_currentTargetIndex];
@@ -70,13 +72,16 @@ namespace MiniJam167.Player
         private void UpdateTarget(bool right)
         {
             GetTarget.TargetableChanged -= UpdateTarget;
+            
             int modifier = right ? 1 : -1;
             do
             {
                 int length = _targetList.Length;
                 _currentTargetIndex = (_currentTargetIndex + length + modifier) % length;
             } while (!GetTarget.Targetable);
+            
             GetTarget.TargetableChanged += UpdateTarget;
+            _targetRadio.Value = GetTarget.Transform;
         }
     }
 }

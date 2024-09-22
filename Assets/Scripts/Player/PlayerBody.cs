@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using DG.Tweening;
+using FMODUnity;
 using MiniJam167.HitSystem;
 using MiniJam167.Utility;
 using UnityEngine;
@@ -35,6 +36,10 @@ namespace MiniJam167.Player
         [Header("Movement")]
         [SerializeField] private Transform _bottomLeftCorner;
         [SerializeField] private Transform _topRightCorner;
+        
+        [Header("Movement")]
+        [SerializeField] private StudioEventEmitter _hitEventEmitter;
+        [SerializeField] private StudioEventEmitter _deathEventEmitter;
 
 		public float Shield => 0;
 		public float DamageMultiplier => 1;
@@ -99,6 +104,7 @@ namespace MiniJam167.Player
 
         private void Die()
         {
+            _deathEventEmitter.Play();
             gameObject.SetActive(false);
             _init = false;
             PlayerInput.PlayerMoved -= OnPlayerMoved;
@@ -109,6 +115,7 @@ namespace MiniJam167.Player
         
         public void OnHit(IHitter hitter)
 		{
+            _hitEventEmitter.Play();
             float damage = this.GetHitDamage(hitter);
             _currentHealth -= damage;
             _spriteRenderer.color = _hitColor.Value;

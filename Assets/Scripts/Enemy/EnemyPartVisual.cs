@@ -100,6 +100,7 @@ namespace MiniJam167.Enemy
 
         private void OnCorrupted()
         {
+            _animator.Play("Open Corrupted");
             _isCorrupted = true;
             Color color = _corruptedColor.Value;
             SetColor(_flashColor.Value);

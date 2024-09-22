@@ -32,8 +32,9 @@ namespace MiniJam167.Projectile
             _animator = GetComponent<Animator>();
         }
 
-        private void Update()
+        protected override void Update()
         {
+            base.Update();
             if (!_isFollowing)
                 return;
             

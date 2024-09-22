@@ -823,7 +823,7 @@
 	</object>
 	<object class="ParameterCondition" id="{d50600fd-a304-4a23-b232-30dd6f43d226}">
 		<property name="minimum">
-			<value>2.119999885559082</value>
+			<value>2.2400000095367432</value>
 		</property>
 		<property name="maximum">
 			<value>3</value>

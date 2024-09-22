@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2509563566510564824}
   - component: {fileID: 5685102541204107273}
   - component: {fileID: 6368290622121501231}
+  - component: {fileID: 7021954033989731574}
   m_Layer: 9
   m_Name: Pf_Enemy_HomingProjectile
   m_TagString: Untagged
@@ -161,6 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5540cddfc7bb4f198e145a4e0116192c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _topRightRadio: {fileID: 11400000, guid: 5e94df67952ce6141abc086e0411a6b2, type: 2}
+  _bottomLeftRadio: {fileID: 11400000, guid: 29cfe65f0547da2409adc2c30bb105e4, type: 2}
   _setScaleOnSpawn: 1
   _lossyScale: 0.2
   SoundCaller: {fileID: 11400000, guid: fc0046218c9daa445b098bfeffa81786, type: 2}
@@ -168,8 +171,40 @@ MonoBehaviour:
   _lethality: 0
   _rb: {fileID: 2509563566510564824}
   _speed: 3
-  _life: 9
   _rotationSpeed: 0.1
   _precisionDuration: 1.5
   _imprecisionDuration: 0.5
   _target: {fileID: 11400000, guid: 1ad4381f928a69843a97a2428d2104f1, type: 2}
+--- !u!114 &7021954033989731574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651679100995585423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1606924320
+      Data2: 1217293676
+      Data3: 236047795
+      Data4: -437832744
+    Path: event:/Attack/TrackerBoss
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params:
+  - Name: TrackerBoss Release
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
